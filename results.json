@@ -4,100 +4,160 @@
             {
                 "ip": "10.209.64.1",
                 "name": "shanghai-232-gw.net.shanghai.nyu.edu",
-                "rtt": 23.68,
+                "rtt": 16.49,
                 "is_destination": false,
                 "protocol": "UDP",
-                "ttl": 1
+                "ttl": 1,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "10.209.64.1",
                 "name": "shanghai-232-gw.net.shanghai.nyu.edu",
-                "rtt": 9.23,
+                "rtt": 7.36,
                 "is_destination": false,
                 "protocol": "TCP",
-                "ttl": 1
+                "ttl": 1,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "10.209.64.1",
                 "name": "shanghai-232-gw.net.shanghai.nyu.edu",
-                "rtt": 10.36,
+                "rtt": 71.36,
                 "is_destination": false,
                 "protocol": "ICMP",
-                "ttl": 1
+                "ttl": 1,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "10.209.64.1",
                 "name": "shanghai-232-gw.net.shanghai.nyu.edu",
-                "rtt": 12.2,
+                "rtt": 8.16,
                 "is_destination": false,
                 "protocol": "UDP",
-                "ttl": 1
+                "ttl": 1,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "10.209.64.1",
                 "name": "shanghai-232-gw.net.shanghai.nyu.edu",
-                "rtt": 13.08,
+                "rtt": 8.18,
                 "is_destination": false,
                 "protocol": "TCP",
-                "ttl": 1
+                "ttl": 1,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "10.209.64.1",
                 "name": "shanghai-232-gw.net.shanghai.nyu.edu",
-                "rtt": 8.57,
+                "rtt": 9.47,
                 "is_destination": false,
                 "protocol": "ICMP",
-                "ttl": 1
+                "ttl": 1,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             }
         ],
         [
             {
-                "ip": "10.213.33.33",
+                "ip": "10.213.33.25",
                 "name": "Unknown",
-                "rtt": 13.0,
+                "rtt": 74.85,
                 "is_destination": false,
                 "protocol": "UDP",
-                "ttl": 2
-            },
-            {
-                "ip": "10.213.33.33",
-                "name": "Unknown",
-                "rtt": 12.65,
-                "is_destination": false,
-                "protocol": "TCP",
-                "ttl": 2
+                "ttl": 2,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "10.213.33.25",
                 "name": "Unknown",
-                "rtt": 43.93,
-                "is_destination": false,
-                "protocol": "ICMP",
-                "ttl": 2
-            },
-            {
-                "ip": "10.213.33.33",
-                "name": "Unknown",
-                "rtt": 13.03,
-                "is_destination": false,
-                "protocol": "UDP",
-                "ttl": 2
-            },
-            {
-                "ip": "10.213.33.33",
-                "name": "Unknown",
-                "rtt": 13.55,
+                "rtt": 16.65,
                 "is_destination": false,
                 "protocol": "TCP",
-                "ttl": 2
+                "ttl": 2,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
+            },
+            {
+                "ip": "10.213.33.33",
+                "name": "Unknown",
+                "rtt": 11.79,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 2,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "10.213.33.25",
                 "name": "Unknown",
-                "rtt": 11.49,
+                "rtt": 10.58,
+                "is_destination": false,
+                "protocol": "UDP",
+                "ttl": 2,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
+            },
+            {
+                "ip": "10.213.33.25",
+                "name": "Unknown",
+                "rtt": 75.66,
+                "is_destination": false,
+                "protocol": "TCP",
+                "ttl": 2,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
+            },
+            {
+                "ip": "10.213.33.33",
+                "name": "Unknown",
+                "rtt": 9.09,
                 "is_destination": false,
                 "protocol": "ICMP",
-                "ttl": 2
+                "ttl": 2,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             }
         ],
         [
@@ -105,45 +165,75 @@
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "10.213.32.97",
                 "name": "Unknown",
-                "rtt": 15.47,
+                "rtt": 10.79,
                 "is_destination": false,
                 "protocol": "TCP",
-                "ttl": 3
+                "ttl": 3,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "10.213.32.97",
                 "name": "Unknown",
-                "rtt": 14.61,
+                "rtt": 9.29,
                 "is_destination": false,
                 "protocol": "ICMP",
-                "ttl": 3
+                "ttl": 3,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "10.213.32.97",
                 "name": "Unknown",
-                "rtt": 14.11,
+                "rtt": 44.69,
                 "is_destination": false,
                 "protocol": "TCP",
-                "ttl": 3
+                "ttl": 3,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "10.213.32.97",
                 "name": "Unknown",
-                "rtt": 8.75,
+                "rtt": 11.56,
                 "is_destination": false,
                 "protocol": "ICMP",
-                "ttl": 3
+                "ttl": 3,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             }
         ],
         [
@@ -151,45 +241,75 @@
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "10.213.32.70",
                 "name": "Unknown",
-                "rtt": 18.13,
+                "rtt": 13.2,
                 "is_destination": false,
                 "protocol": "TCP",
-                "ttl": 4
+                "ttl": 4,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "10.213.32.70",
                 "name": "Unknown",
-                "rtt": 13.67,
+                "rtt": 10.16,
                 "is_destination": false,
                 "protocol": "ICMP",
-                "ttl": 4
+                "ttl": 4,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "10.213.32.70",
                 "name": "Unknown",
-                "rtt": 15.6,
+                "rtt": 32.88,
                 "is_destination": false,
                 "protocol": "TCP",
-                "ttl": 4
+                "ttl": 4,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "10.213.32.70",
                 "name": "Unknown",
-                "rtt": 88.0,
+                "rtt": 12.51,
                 "is_destination": false,
                 "protocol": "ICMP",
-                "ttl": 4
+                "ttl": 4,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             }
         ],
         [
@@ -197,45 +317,79 @@
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "194.223.152.17",
                 "name": "Unknown",
-                "rtt": 43.96,
+                "rtt": 44.57,
                 "is_destination": false,
                 "protocol": "TCP",
-                "ttl": 5
+                "ttl": 5,
+                "geo": {
+                    "lat": 35.6893,
+                    "lon": 139.6899,
+                    "city": "Tokyo",
+                    "country": "Japan"
+                }
             },
             {
                 "ip": "194.223.152.17",
                 "name": "Unknown",
-                "rtt": 41.94,
+                "rtt": 39.87,
                 "is_destination": false,
                 "protocol": "ICMP",
-                "ttl": 5
+                "ttl": 5,
+                "geo": {
+                    "lat": 35.6893,
+                    "lon": 139.6899,
+                    "city": "Tokyo",
+                    "country": "Japan"
+                }
             },
             {
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "194.223.152.17",
                 "name": "Unknown",
-                "rtt": 64.66,
+                "rtt": 42.69,
                 "is_destination": false,
                 "protocol": "TCP",
-                "ttl": 5
+                "ttl": 5,
+                "geo": {
+                    "lat": 35.6893,
+                    "lon": 139.6899,
+                    "city": "Tokyo",
+                    "country": "Japan"
+                }
             },
             {
                 "ip": "194.223.152.17",
                 "name": "Unknown",
-                "rtt": 44.8,
+                "rtt": 35.24,
                 "is_destination": false,
                 "protocol": "ICMP",
-                "ttl": 5
+                "ttl": 5,
+                "geo": {
+                    "lat": 35.6893,
+                    "lon": 139.6899,
+                    "city": "Tokyo",
+                    "country": "Japan"
+                }
             }
         ],
         [
@@ -243,45 +397,79 @@
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "193.114.182.92",
                 "name": "Unknown",
-                "rtt": 47.7,
+                "rtt": 43.24,
                 "is_destination": false,
                 "protocol": "TCP",
-                "ttl": 6
+                "ttl": 6,
+                "geo": {
+                    "lat": 51.5063,
+                    "lon": -0.100193,
+                    "city": "City of London",
+                    "country": "United Kingdom"
+                }
             },
             {
                 "ip": "193.114.182.92",
                 "name": "Unknown",
-                "rtt": 85.78,
+                "rtt": 41.14,
                 "is_destination": false,
                 "protocol": "ICMP",
-                "ttl": 6
+                "ttl": 6,
+                "geo": {
+                    "lat": 51.5063,
+                    "lon": -0.100193,
+                    "city": "City of London",
+                    "country": "United Kingdom"
+                }
             },
             {
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "193.114.182.92",
                 "name": "Unknown",
-                "rtt": 44.63,
+                "rtt": 41.57,
                 "is_destination": false,
                 "protocol": "TCP",
-                "ttl": 6
+                "ttl": 6,
+                "geo": {
+                    "lat": 51.5063,
+                    "lon": -0.100193,
+                    "city": "City of London",
+                    "country": "United Kingdom"
+                }
             },
             {
                 "ip": "193.114.182.92",
                 "name": "Unknown",
-                "rtt": 44.12,
+                "rtt": 43.59,
                 "is_destination": false,
                 "protocol": "ICMP",
-                "ttl": 6
+                "ttl": 6,
+                "geo": {
+                    "lat": 51.5063,
+                    "lon": -0.100193,
+                    "city": "City of London",
+                    "country": "United Kingdom"
+                }
             }
         ],
         [
@@ -289,45 +477,79 @@
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "210.173.176.245",
                 "name": "Unknown",
-                "rtt": 38.07,
+                "rtt": 110.47,
                 "is_destination": false,
                 "protocol": "TCP",
-                "ttl": 7
+                "ttl": 7,
+                "geo": {
+                    "lat": 35.6916,
+                    "lon": 139.768,
+                    "city": "Chiyoda City",
+                    "country": "Japan"
+                }
             },
             {
                 "ip": "210.173.176.245",
                 "name": "Unknown",
-                "rtt": 45.41,
+                "rtt": 39.2,
                 "is_destination": false,
                 "protocol": "ICMP",
-                "ttl": 7
+                "ttl": 7,
+                "geo": {
+                    "lat": 35.6916,
+                    "lon": 139.768,
+                    "city": "Chiyoda City",
+                    "country": "Japan"
+                }
             },
             {
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "210.173.176.245",
                 "name": "Unknown",
-                "rtt": 40.93,
+                "rtt": 39.08,
                 "is_destination": false,
                 "protocol": "TCP",
-                "ttl": 7
+                "ttl": 7,
+                "geo": {
+                    "lat": 35.6916,
+                    "lon": 139.768,
+                    "city": "Chiyoda City",
+                    "country": "Japan"
+                }
             },
             {
                 "ip": "210.173.176.245",
                 "name": "Unknown",
-                "rtt": 59.13,
+                "rtt": 39.69,
                 "is_destination": false,
                 "protocol": "ICMP",
-                "ttl": 7
+                "ttl": 7,
+                "geo": {
+                    "lat": 35.6916,
+                    "lon": 139.768,
+                    "city": "Chiyoda City",
+                    "country": "Japan"
+                }
             }
         ],
         [
@@ -335,41 +557,73 @@
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "192.178.248.173",
                 "name": "Unknown",
-                "rtt": 39.18,
+                "rtt": 56.13,
                 "is_destination": false,
                 "protocol": "ICMP",
-                "ttl": 8
+                "ttl": 8,
+                "geo": {
+                    "lat": 37.4225,
+                    "lon": -122.085,
+                    "city": "Mountain View",
+                    "country": "United States"
+                }
             },
             {
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "192.178.248.173",
                 "name": "Unknown",
-                "rtt": 106.85,
+                "rtt": 104.62,
                 "is_destination": false,
                 "protocol": "ICMP",
-                "ttl": 8
+                "ttl": 8,
+                "geo": {
+                    "lat": 37.4225,
+                    "lon": -122.085,
+                    "city": "Mountain View",
+                    "country": "United States"
+                }
             }
         ],
         [
@@ -377,41 +631,73 @@
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "108.170.235.121",
                 "name": "Unknown",
-                "rtt": 80.18,
+                "rtt": 87.04,
                 "is_destination": false,
                 "protocol": "ICMP",
-                "ttl": 9
+                "ttl": 9,
+                "geo": {
+                    "lat": 37.4225,
+                    "lon": -122.085,
+                    "city": "Mountain View",
+                    "country": "United States"
+                }
             },
             {
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "108.170.235.121",
                 "name": "Unknown",
-                "rtt": 43.67,
+                "rtt": 95.36,
                 "is_destination": false,
                 "protocol": "ICMP",
-                "ttl": 9
+                "ttl": 9,
+                "geo": {
+                    "lat": 37.4225,
+                    "lon": -122.085,
+                    "city": "Mountain View",
+                    "country": "United States"
+                }
             }
         ],
         [
@@ -419,41 +705,73 @@
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "8.8.8.8",
                 "name": "dns.google",
-                "rtt": 44.53,
+                "rtt": 50.15,
                 "is_destination": true,
                 "protocol": "ICMP",
-                "ttl": 10
+                "ttl": 10,
+                "geo": {
+                    "lat": 39.03,
+                    "lon": -77.5,
+                    "city": "Ashburn",
+                    "country": "United States"
+                }
             },
             {
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "8.8.8.8",
                 "name": "dns.google",
-                "rtt": 63.15,
+                "rtt": 95.89,
                 "is_destination": true,
                 "protocol": "ICMP",
-                "ttl": 10
+                "ttl": 10,
+                "geo": {
+                    "lat": 39.03,
+                    "lon": -77.5,
+                    "city": "Ashburn",
+                    "country": "United States"
+                }
             }
         ]
     ],
@@ -462,100 +780,160 @@
             {
                 "ip": "10.209.64.1",
                 "name": "shanghai-232-gw.net.shanghai.nyu.edu",
-                "rtt": 10.94,
+                "rtt": 10.84,
                 "is_destination": false,
                 "protocol": "UDP",
-                "ttl": 1
+                "ttl": 1,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "10.209.64.1",
                 "name": "shanghai-232-gw.net.shanghai.nyu.edu",
-                "rtt": 15.76,
+                "rtt": 10.16,
                 "is_destination": false,
                 "protocol": "TCP",
-                "ttl": 1
+                "ttl": 1,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "10.209.64.1",
                 "name": "shanghai-232-gw.net.shanghai.nyu.edu",
-                "rtt": 15.83,
+                "rtt": 10.31,
                 "is_destination": false,
                 "protocol": "ICMP",
-                "ttl": 1
+                "ttl": 1,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "10.209.64.1",
                 "name": "shanghai-232-gw.net.shanghai.nyu.edu",
-                "rtt": 18.61,
+                "rtt": 75.52,
                 "is_destination": false,
                 "protocol": "UDP",
-                "ttl": 1
+                "ttl": 1,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "10.209.64.1",
                 "name": "shanghai-232-gw.net.shanghai.nyu.edu",
-                "rtt": 10.2,
+                "rtt": 10.21,
                 "is_destination": false,
                 "protocol": "TCP",
-                "ttl": 1
+                "ttl": 1,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "10.209.64.1",
                 "name": "shanghai-232-gw.net.shanghai.nyu.edu",
-                "rtt": 14.08,
+                "rtt": 10.76,
                 "is_destination": false,
                 "protocol": "ICMP",
-                "ttl": 1
+                "ttl": 1,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             }
         ],
         [
             {
-                "ip": "10.213.33.33",
+                "ip": "10.213.33.25",
                 "name": "Unknown",
-                "rtt": 19.62,
+                "rtt": 11.79,
                 "is_destination": false,
                 "protocol": "UDP",
-                "ttl": 2
-            },
-            {
-                "ip": "10.213.33.33",
-                "name": "Unknown",
-                "rtt": 51.65,
-                "is_destination": false,
-                "protocol": "TCP",
-                "ttl": 2
+                "ttl": 2,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "10.213.33.25",
                 "name": "Unknown",
-                "rtt": 14.54,
-                "is_destination": false,
-                "protocol": "ICMP",
-                "ttl": 2
-            },
-            {
-                "ip": "10.213.33.33",
-                "name": "Unknown",
-                "rtt": 15.04,
-                "is_destination": false,
-                "protocol": "UDP",
-                "ttl": 2
-            },
-            {
-                "ip": "10.213.33.33",
-                "name": "Unknown",
-                "rtt": 13.24,
+                "rtt": 68.55,
                 "is_destination": false,
                 "protocol": "TCP",
-                "ttl": 2
+                "ttl": 2,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
+            },
+            {
+                "ip": "10.213.33.33",
+                "name": "Unknown",
+                "rtt": 11.5,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 2,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "10.213.33.25",
                 "name": "Unknown",
-                "rtt": 15.04,
+                "rtt": 12.54,
+                "is_destination": false,
+                "protocol": "UDP",
+                "ttl": 2,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
+            },
+            {
+                "ip": "10.213.33.25",
+                "name": "Unknown",
+                "rtt": 12.07,
+                "is_destination": false,
+                "protocol": "TCP",
+                "ttl": 2,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
+            },
+            {
+                "ip": "10.213.33.33",
+                "name": "Unknown",
+                "rtt": 73.77,
                 "is_destination": false,
                 "protocol": "ICMP",
-                "ttl": 2
+                "ttl": 2,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             }
         ],
         [
@@ -563,45 +941,75 @@
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "10.213.32.97",
                 "name": "Unknown",
-                "rtt": 76.49,
+                "rtt": 10.77,
                 "is_destination": false,
                 "protocol": "TCP",
-                "ttl": 3
+                "ttl": 3,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "10.213.32.97",
                 "name": "Unknown",
-                "rtt": 9.8,
+                "rtt": 9.88,
                 "is_destination": false,
                 "protocol": "ICMP",
-                "ttl": 3
+                "ttl": 3,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "10.213.32.97",
                 "name": "Unknown",
-                "rtt": 16.2,
+                "rtt": 8.67,
                 "is_destination": false,
                 "protocol": "TCP",
-                "ttl": 3
+                "ttl": 3,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "10.213.32.97",
                 "name": "Unknown",
-                "rtt": 12.45,
+                "rtt": 26.11,
                 "is_destination": false,
                 "protocol": "ICMP",
-                "ttl": 3
+                "ttl": 3,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             }
         ],
         [
@@ -609,45 +1017,75 @@
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "10.213.32.70",
                 "name": "Unknown",
-                "rtt": 16.63,
+                "rtt": 12.6,
                 "is_destination": false,
                 "protocol": "TCP",
-                "ttl": 4
+                "ttl": 4,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "10.213.32.70",
                 "name": "Unknown",
-                "rtt": 12.81,
+                "rtt": 11.94,
                 "is_destination": false,
                 "protocol": "ICMP",
-                "ttl": 4
+                "ttl": 4,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "10.213.32.70",
                 "name": "Unknown",
-                "rtt": 14.78,
+                "rtt": 14.31,
                 "is_destination": false,
                 "protocol": "TCP",
-                "ttl": 4
+                "ttl": 4,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "10.213.32.70",
                 "name": "Unknown",
-                "rtt": 25.58,
+                "rtt": 30.89,
                 "is_destination": false,
                 "protocol": "ICMP",
-                "ttl": 4
+                "ttl": 4,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             }
         ],
         [
@@ -655,45 +1093,79 @@
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "194.223.152.17",
                 "name": "Unknown",
-                "rtt": 53.5,
+                "rtt": 38.98,
                 "is_destination": false,
                 "protocol": "TCP",
-                "ttl": 5
+                "ttl": 5,
+                "geo": {
+                    "lat": 35.6893,
+                    "lon": 139.6899,
+                    "city": "Tokyo",
+                    "country": "Japan"
+                }
             },
             {
                 "ip": "194.223.152.17",
                 "name": "Unknown",
-                "rtt": 42.09,
+                "rtt": 39.51,
                 "is_destination": false,
                 "protocol": "ICMP",
-                "ttl": 5
+                "ttl": 5,
+                "geo": {
+                    "lat": 35.6893,
+                    "lon": 139.6899,
+                    "city": "Tokyo",
+                    "country": "Japan"
+                }
             },
             {
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "194.223.152.17",
                 "name": "Unknown",
-                "rtt": 55.3,
+                "rtt": 40.22,
                 "is_destination": false,
                 "protocol": "TCP",
-                "ttl": 5
+                "ttl": 5,
+                "geo": {
+                    "lat": 35.6893,
+                    "lon": 139.6899,
+                    "city": "Tokyo",
+                    "country": "Japan"
+                }
             },
             {
                 "ip": "194.223.152.17",
                 "name": "Unknown",
-                "rtt": 45.78,
+                "rtt": 44.9,
                 "is_destination": false,
                 "protocol": "ICMP",
-                "ttl": 5
+                "ttl": 5,
+                "geo": {
+                    "lat": 35.6893,
+                    "lon": 139.6899,
+                    "city": "Tokyo",
+                    "country": "Japan"
+                }
             }
         ],
         [
@@ -701,45 +1173,79 @@
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "193.114.182.92",
                 "name": "Unknown",
-                "rtt": 43.11,
+                "rtt": 102.86,
                 "is_destination": false,
                 "protocol": "TCP",
-                "ttl": 6
+                "ttl": 6,
+                "geo": {
+                    "lat": 51.5063,
+                    "lon": -0.100193,
+                    "city": "City of London",
+                    "country": "United Kingdom"
+                }
             },
             {
                 "ip": "193.114.182.92",
                 "name": "Unknown",
-                "rtt": 47.56,
+                "rtt": 36.47,
                 "is_destination": false,
                 "protocol": "ICMP",
-                "ttl": 6
+                "ttl": 6,
+                "geo": {
+                    "lat": 51.5063,
+                    "lon": -0.100193,
+                    "city": "City of London",
+                    "country": "United Kingdom"
+                }
             },
             {
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "193.114.182.92",
                 "name": "Unknown",
-                "rtt": 47.03,
+                "rtt": 39.76,
                 "is_destination": false,
                 "protocol": "TCP",
-                "ttl": 6
+                "ttl": 6,
+                "geo": {
+                    "lat": 51.5063,
+                    "lon": -0.100193,
+                    "city": "City of London",
+                    "country": "United Kingdom"
+                }
             },
             {
                 "ip": "193.114.182.92",
                 "name": "Unknown",
-                "rtt": 47.99,
+                "rtt": 43.56,
                 "is_destination": false,
                 "protocol": "ICMP",
-                "ttl": 6
+                "ttl": 6,
+                "geo": {
+                    "lat": 51.5063,
+                    "lon": -0.100193,
+                    "city": "City of London",
+                    "country": "United Kingdom"
+                }
             }
         ],
         [
@@ -747,45 +1253,79 @@
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "210.173.176.245",
                 "name": "Unknown",
-                "rtt": 44.34,
+                "rtt": 45.54,
                 "is_destination": false,
                 "protocol": "TCP",
-                "ttl": 7
+                "ttl": 7,
+                "geo": {
+                    "lat": 35.6916,
+                    "lon": 139.768,
+                    "city": "Chiyoda City",
+                    "country": "Japan"
+                }
             },
             {
                 "ip": "210.173.176.245",
                 "name": "Unknown",
-                "rtt": 40.51,
+                "rtt": 40.78,
                 "is_destination": false,
                 "protocol": "ICMP",
-                "ttl": 7
+                "ttl": 7,
+                "geo": {
+                    "lat": 35.6916,
+                    "lon": 139.768,
+                    "city": "Chiyoda City",
+                    "country": "Japan"
+                }
             },
             {
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "210.173.176.245",
                 "name": "Unknown",
-                "rtt": 110.5,
+                "rtt": 40.91,
                 "is_destination": false,
                 "protocol": "TCP",
-                "ttl": 7
+                "ttl": 7,
+                "geo": {
+                    "lat": 35.6916,
+                    "lon": 139.768,
+                    "city": "Chiyoda City",
+                    "country": "Japan"
+                }
             },
             {
                 "ip": "210.173.176.245",
                 "name": "Unknown",
-                "rtt": 42.83,
+                "rtt": 42.81,
                 "is_destination": false,
                 "protocol": "ICMP",
-                "ttl": 7
+                "ttl": 7,
+                "geo": {
+                    "lat": 35.6916,
+                    "lon": 139.768,
+                    "city": "Chiyoda City",
+                    "country": "Japan"
+                }
             }
         ],
         [
@@ -793,41 +1333,73 @@
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "209.85.250.107",
                 "name": "Unknown",
-                "rtt": 44.18,
+                "rtt": 38.22,
                 "is_destination": false,
                 "protocol": "ICMP",
-                "ttl": 8
+                "ttl": 8,
+                "geo": {
+                    "lat": 37.4225,
+                    "lon": -122.085,
+                    "city": "Mountain View",
+                    "country": "United States"
+                }
             },
             {
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "209.85.250.107",
                 "name": "Unknown",
-                "rtt": 44.47,
+                "rtt": 41.79,
                 "is_destination": false,
                 "protocol": "ICMP",
-                "ttl": 8
+                "ttl": 8,
+                "geo": {
+                    "lat": 37.4225,
+                    "lon": -122.085,
+                    "city": "Mountain View",
+                    "country": "United States"
+                }
             }
         ],
         [
@@ -835,41 +1407,73 @@
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "142.250.61.143",
                 "name": "Unknown",
-                "rtt": 42.27,
+                "rtt": 39.3,
                 "is_destination": false,
                 "protocol": "ICMP",
-                "ttl": 9
+                "ttl": 9,
+                "geo": {
+                    "lat": 37.4225,
+                    "lon": -122.085,
+                    "city": "Mountain View",
+                    "country": "United States"
+                }
             },
             {
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "142.250.61.143",
                 "name": "Unknown",
-                "rtt": 53.75,
+                "rtt": 39.18,
                 "is_destination": false,
                 "protocol": "ICMP",
-                "ttl": 9
+                "ttl": 9,
+                "geo": {
+                    "lat": 37.4225,
+                    "lon": -122.085,
+                    "city": "Mountain View",
+                    "country": "United States"
+                }
             }
         ],
         [
@@ -877,41 +1481,73 @@
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "8.8.4.4",
                 "name": "dns.google",
-                "rtt": 42.47,
+                "rtt": 69.42,
                 "is_destination": true,
                 "protocol": "ICMP",
-                "ttl": 10
+                "ttl": 10,
+                "geo": {
+                    "lat": 39.03,
+                    "lon": -77.5,
+                    "city": "Ashburn",
+                    "country": "United States"
+                }
             },
             {
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "8.8.4.4",
                 "name": "dns.google",
-                "rtt": 43.74,
+                "rtt": 94.16,
                 "is_destination": true,
                 "protocol": "ICMP",
-                "ttl": 10
+                "ttl": 10,
+                "geo": {
+                    "lat": 39.03,
+                    "lon": -77.5,
+                    "city": "Ashburn",
+                    "country": "United States"
+                }
             }
         ]
     ],
@@ -920,100 +1556,160 @@
             {
                 "ip": "10.209.64.1",
                 "name": "shanghai-232-gw.net.shanghai.nyu.edu",
-                "rtt": 11.86,
+                "rtt": 9.2,
                 "is_destination": false,
                 "protocol": "UDP",
-                "ttl": 1
+                "ttl": 1,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "10.209.64.1",
                 "name": "shanghai-232-gw.net.shanghai.nyu.edu",
-                "rtt": 91.94,
+                "rtt": 9.58,
                 "is_destination": false,
                 "protocol": "TCP",
-                "ttl": 1
+                "ttl": 1,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "10.209.64.1",
                 "name": "shanghai-232-gw.net.shanghai.nyu.edu",
-                "rtt": 12.99,
+                "rtt": 8.84,
                 "is_destination": false,
                 "protocol": "ICMP",
-                "ttl": 1
+                "ttl": 1,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "10.209.64.1",
                 "name": "shanghai-232-gw.net.shanghai.nyu.edu",
-                "rtt": 12.97,
+                "rtt": 77.03,
                 "is_destination": false,
                 "protocol": "UDP",
-                "ttl": 1
+                "ttl": 1,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "10.209.64.1",
                 "name": "shanghai-232-gw.net.shanghai.nyu.edu",
-                "rtt": 7.62,
+                "rtt": 8.54,
                 "is_destination": false,
                 "protocol": "TCP",
-                "ttl": 1
+                "ttl": 1,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "10.209.64.1",
                 "name": "shanghai-232-gw.net.shanghai.nyu.edu",
-                "rtt": 63.72,
+                "rtt": 7.98,
                 "is_destination": false,
                 "protocol": "ICMP",
-                "ttl": 1
+                "ttl": 1,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             }
         ],
         [
             {
-                "ip": "10.213.33.25",
+                "ip": "10.213.33.33",
                 "name": "Unknown",
-                "rtt": 12.17,
+                "rtt": 7.11,
                 "is_destination": false,
                 "protocol": "UDP",
-                "ttl": 2
-            },
-            {
-                "ip": "10.213.33.25",
-                "name": "Unknown",
-                "rtt": 11.92,
-                "is_destination": false,
-                "protocol": "TCP",
-                "ttl": 2
+                "ttl": 2,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "10.213.33.33",
                 "name": "Unknown",
-                "rtt": 10.93,
-                "is_destination": false,
-                "protocol": "ICMP",
-                "ttl": 2
-            },
-            {
-                "ip": "10.213.33.25",
-                "name": "Unknown",
-                "rtt": 61.23,
-                "is_destination": false,
-                "protocol": "UDP",
-                "ttl": 2
-            },
-            {
-                "ip": "10.213.33.25",
-                "name": "Unknown",
-                "rtt": 11.84,
+                "rtt": 76.59,
                 "is_destination": false,
                 "protocol": "TCP",
-                "ttl": 2
+                "ttl": 2,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
+            },
+            {
+                "ip": "10.213.33.25",
+                "name": "Unknown",
+                "rtt": 12.33,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 2,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "10.213.33.33",
                 "name": "Unknown",
-                "rtt": 15.24,
+                "rtt": 10.49,
+                "is_destination": false,
+                "protocol": "UDP",
+                "ttl": 2,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
+            },
+            {
+                "ip": "10.213.33.33",
+                "name": "Unknown",
+                "rtt": 9.81,
+                "is_destination": false,
+                "protocol": "TCP",
+                "ttl": 2,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
+            },
+            {
+                "ip": "10.213.33.25",
+                "name": "Unknown",
+                "rtt": 70.46,
                 "is_destination": false,
                 "protocol": "ICMP",
-                "ttl": 2
+                "ttl": 2,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             }
         ],
         [
@@ -1021,45 +1717,75 @@
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "10.213.32.97",
                 "name": "Unknown",
-                "rtt": 16.92,
+                "rtt": 12.45,
                 "is_destination": false,
                 "protocol": "TCP",
-                "ttl": 3
+                "ttl": 3,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "10.213.32.97",
                 "name": "Unknown",
-                "rtt": 14.08,
+                "rtt": 8.77,
                 "is_destination": false,
                 "protocol": "ICMP",
-                "ttl": 3
+                "ttl": 3,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "10.213.32.97",
                 "name": "Unknown",
-                "rtt": 18.51,
+                "rtt": 8.36,
                 "is_destination": false,
                 "protocol": "TCP",
-                "ttl": 3
+                "ttl": 3,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "10.213.32.97",
                 "name": "Unknown",
-                "rtt": 16.95,
+                "rtt": 49.73,
                 "is_destination": false,
                 "protocol": "ICMP",
-                "ttl": 3
+                "ttl": 3,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             }
         ],
         [
@@ -1067,45 +1793,75 @@
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "10.213.32.70",
                 "name": "Unknown",
-                "rtt": 96.97,
+                "rtt": 10.64,
                 "is_destination": false,
                 "protocol": "TCP",
-                "ttl": 4
+                "ttl": 4,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "10.213.32.70",
                 "name": "Unknown",
-                "rtt": 11.17,
+                "rtt": 11.69,
                 "is_destination": false,
                 "protocol": "ICMP",
-                "ttl": 4
+                "ttl": 4,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "10.213.32.70",
                 "name": "Unknown",
-                "rtt": 17.41,
+                "rtt": 12.81,
                 "is_destination": false,
                 "protocol": "TCP",
-                "ttl": 4
+                "ttl": 4,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "10.213.32.70",
                 "name": "Unknown",
-                "rtt": 12.7,
+                "rtt": 40.05,
                 "is_destination": false,
                 "protocol": "ICMP",
-                "ttl": 4
+                "ttl": 4,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             }
         ],
         [
@@ -1113,45 +1869,79 @@
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "194.223.152.17",
                 "name": "Unknown",
-                "rtt": 52.82,
+                "rtt": 41.1,
                 "is_destination": false,
                 "protocol": "TCP",
-                "ttl": 5
+                "ttl": 5,
+                "geo": {
+                    "lat": 35.6893,
+                    "lon": 139.6899,
+                    "city": "Tokyo",
+                    "country": "Japan"
+                }
             },
             {
                 "ip": "194.223.152.17",
                 "name": "Unknown",
-                "rtt": 43.29,
+                "rtt": 41.8,
                 "is_destination": false,
                 "protocol": "ICMP",
-                "ttl": 5
+                "ttl": 5,
+                "geo": {
+                    "lat": 35.6893,
+                    "lon": 139.6899,
+                    "city": "Tokyo",
+                    "country": "Japan"
+                }
             },
             {
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "194.223.152.17",
                 "name": "Unknown",
-                "rtt": 121.68,
+                "rtt": 39.26,
                 "is_destination": false,
                 "protocol": "TCP",
-                "ttl": 5
+                "ttl": 5,
+                "geo": {
+                    "lat": 35.6893,
+                    "lon": 139.6899,
+                    "city": "Tokyo",
+                    "country": "Japan"
+                }
             },
             {
                 "ip": "194.223.152.17",
                 "name": "Unknown",
-                "rtt": 49.64,
+                "rtt": 39.79,
                 "is_destination": false,
                 "protocol": "ICMP",
-                "ttl": 5
+                "ttl": 5,
+                "geo": {
+                    "lat": 35.6893,
+                    "lon": 139.6899,
+                    "city": "Tokyo",
+                    "country": "Japan"
+                }
             }
         ],
         [
@@ -1159,45 +1949,79 @@
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "193.114.182.92",
                 "name": "Unknown",
-                "rtt": 44.37,
+                "rtt": 40.37,
                 "is_destination": false,
                 "protocol": "TCP",
-                "ttl": 6
+                "ttl": 6,
+                "geo": {
+                    "lat": 51.5063,
+                    "lon": -0.100193,
+                    "city": "City of London",
+                    "country": "United Kingdom"
+                }
             },
             {
                 "ip": "193.114.182.92",
                 "name": "Unknown",
-                "rtt": 52.46,
+                "rtt": 46.47,
                 "is_destination": false,
                 "protocol": "ICMP",
-                "ttl": 6
+                "ttl": 6,
+                "geo": {
+                    "lat": 51.5063,
+                    "lon": -0.100193,
+                    "city": "City of London",
+                    "country": "United Kingdom"
+                }
             },
             {
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "193.114.182.92",
                 "name": "Unknown",
-                "rtt": 43.57,
+                "rtt": 98.59,
                 "is_destination": false,
                 "protocol": "TCP",
-                "ttl": 6
+                "ttl": 6,
+                "geo": {
+                    "lat": 51.5063,
+                    "lon": -0.100193,
+                    "city": "City of London",
+                    "country": "United Kingdom"
+                }
             },
             {
                 "ip": "193.114.182.92",
                 "name": "Unknown",
-                "rtt": 48.1,
+                "rtt": 40.65,
                 "is_destination": false,
                 "protocol": "ICMP",
-                "ttl": 6
+                "ttl": 6,
+                "geo": {
+                    "lat": 51.5063,
+                    "lon": -0.100193,
+                    "city": "City of London",
+                    "country": "United Kingdom"
+                }
             }
         ],
         [
@@ -1205,43 +2029,79 @@
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "210.171.224.134",
                 "name": "Unknown",
-                "rtt": 49.5,
+                "rtt": 43.02,
                 "is_destination": false,
                 "protocol": "TCP",
-                "ttl": 7
+                "ttl": 7,
+                "geo": {
+                    "lat": 35.6916,
+                    "lon": 139.768,
+                    "city": "Chiyoda City",
+                    "country": "Japan"
+                }
             },
             {
                 "ip": "210.171.224.134",
                 "name": "Unknown",
-                "rtt": 44.9,
+                "rtt": 54.2,
                 "is_destination": false,
                 "protocol": "ICMP",
-                "ttl": 7
+                "ttl": 7,
+                "geo": {
+                    "lat": 35.6916,
+                    "lon": 139.768,
+                    "city": "Chiyoda City",
+                    "country": "Japan"
+                }
             },
             {
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "210.171.224.134",
                 "name": "Unknown",
-                "rtt": 122.45,
+                "rtt": 40.86,
                 "is_destination": false,
                 "protocol": "TCP",
-                "ttl": 7
+                "ttl": 7,
+                "geo": {
+                    "lat": 35.6916,
+                    "lon": 139.768,
+                    "city": "Chiyoda City",
+                    "country": "Japan"
+                }
             },
             {
-                "ip": null,
-                "name": "*",
-                "rtt": 0.0,
-                "is_destination": false
+                "ip": "210.171.224.134",
+                "name": "Unknown",
+                "rtt": 40.48,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 7,
+                "geo": {
+                    "lat": 35.6916,
+                    "lon": 139.768,
+                    "city": "Chiyoda City",
+                    "country": "Japan"
+                }
             }
         ],
         [
@@ -1249,45 +2109,79 @@
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
-                "ip": "103.22.201.119",
+                "ip": "103.22.201.87",
                 "name": "Unknown",
-                "rtt": 48.3,
+                "rtt": 113.11,
                 "is_destination": false,
                 "protocol": "TCP",
-                "ttl": 8
+                "ttl": 8,
+                "geo": {
+                    "lat": 35.6761,
+                    "lon": 139.6503,
+                    "city": "Tokyo",
+                    "country": "Japan"
+                }
             },
             {
                 "ip": "103.22.201.123",
                 "name": "Unknown",
-                "rtt": 50.22,
+                "rtt": 44.07,
                 "is_destination": false,
                 "protocol": "ICMP",
-                "ttl": 8
+                "ttl": 8,
+                "geo": {
+                    "lat": 35.6761,
+                    "lon": 139.6503,
+                    "city": "Tokyo",
+                    "country": "Japan"
+                }
             },
             {
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
-                "ip": "103.22.201.119",
+                "ip": "103.22.201.87",
                 "name": "Unknown",
-                "rtt": 108.27,
+                "rtt": 120.1,
                 "is_destination": false,
                 "protocol": "TCP",
-                "ttl": 8
+                "ttl": 8,
+                "geo": {
+                    "lat": 35.6761,
+                    "lon": 139.6503,
+                    "city": "Tokyo",
+                    "country": "Japan"
+                }
             },
             {
                 "ip": "103.22.201.123",
                 "name": "Unknown",
-                "rtt": 42.26,
+                "rtt": 44.63,
                 "is_destination": false,
                 "protocol": "ICMP",
-                "ttl": 8
+                "ttl": 8,
+                "geo": {
+                    "lat": 35.6761,
+                    "lon": 139.6503,
+                    "city": "Tokyo",
+                    "country": "Japan"
+                }
             }
         ],
         [
@@ -1295,41 +2189,73 @@
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "1.1.1.1",
                 "name": "one.one.one.one",
-                "rtt": 123.0,
+                "rtt": 42.87,
                 "is_destination": true,
                 "protocol": "ICMP",
-                "ttl": 9
+                "ttl": 9,
+                "geo": {
+                    "lat": -27.4766,
+                    "lon": 153.0166,
+                    "city": "South Brisbane",
+                    "country": "Australia"
+                }
             },
             {
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": null,
                 "name": "*",
                 "rtt": 0.0,
-                "is_destination": false
+                "is_destination": false,
+                "geo": {
+                    "lat": null,
+                    "lon": null,
+                    "city": "Unknown"
+                }
             },
             {
                 "ip": "1.1.1.1",
                 "name": "one.one.one.one",
-                "rtt": 41.89,
+                "rtt": 41.06,
                 "is_destination": true,
                 "protocol": "ICMP",
-                "ttl": 9
+                "ttl": 9,
+                "geo": {
+                    "lat": -27.4766,
+                    "lon": 153.0166,
+                    "city": "South Brisbane",
+                    "country": "Australia"
+                }
             }
         ]
     ]
