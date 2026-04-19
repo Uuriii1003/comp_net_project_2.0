@@ -169,3 +169,10 @@ if __name__ == "__main__":
     with open("results.json", "w") as f:
         json.dump(all_data, f, indent=4)
     print(f"\nResults saved to results.json")
+
+    try:
+        from generate_viz import process_for_viz
+        process_for_viz("results.json", "topology.json")
+        print("Topology graph updated successfully.")
+    except ImportError:
+        print("Could not find generate_viz.py, skipping graph update.")
