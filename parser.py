@@ -3,7 +3,7 @@ from scapy.all import ICMP, IP
 
 def send_and_parse(response, protocol, rtt, ttl, original_target):
     if response is None:
-        return {"ip": None, "name": "*", "rtt": 0.0, "is_destination": False}
+        return {"ip": None, "name": "*", "rtt": 0.0, "is_destination": False, "protocol": protocol, "ttl": ttl}
 
     sender_ip = response.src
     
