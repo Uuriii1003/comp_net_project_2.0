@@ -70,6 +70,7 @@ with st.sidebar:
 
         cmd = [
             "sudo", sys.executable, "main.py", tmp_path,
+<<<<<<< HEAD
             "--min_ttl",    str(min_ttl),
             "--max_ttl",    str(max_ttl),
             "--num_series", str(num_series),
@@ -77,6 +78,15 @@ with st.sidebar:
             "--size",       str(pkt_size),
             "--wait",       str(wait),
             "--timeout",    str(timeout),
+=======
+            "-min",    str(min_ttl),
+            "-m",    str(max_ttl),
+            "-n", str(num_series),
+            "-p",       str(port),
+            "-s",       str(pkt_size),
+            "-s",       str(wait),
+            "-t",    str(timeout),
+>>>>>>> bb4e9cd (updated visualizer)
         ]
 
         st.info("Running traceroute — this may take a minute...")
@@ -213,4 +223,8 @@ with col_out:
                     })
                 st.dataframe(rows, use_container_width=True, hide_index=True)
         else:
+<<<<<<< HEAD
             st.info("No results yet.")
+=======
+            st.info("No results yet.")
+>>>>>>> bb4e9cd (updated visualizer)
