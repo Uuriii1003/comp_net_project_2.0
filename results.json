@@ -1,0 +1,1336 @@
+{
+    "8.8.8.8": [
+        [
+            {
+                "ip": "10.209.64.1",
+                "name": "shanghai-232-gw.net.shanghai.nyu.edu",
+                "rtt": 23.68,
+                "is_destination": false,
+                "protocol": "UDP",
+                "ttl": 1
+            },
+            {
+                "ip": "10.209.64.1",
+                "name": "shanghai-232-gw.net.shanghai.nyu.edu",
+                "rtt": 9.23,
+                "is_destination": false,
+                "protocol": "TCP",
+                "ttl": 1
+            },
+            {
+                "ip": "10.209.64.1",
+                "name": "shanghai-232-gw.net.shanghai.nyu.edu",
+                "rtt": 10.36,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 1
+            },
+            {
+                "ip": "10.209.64.1",
+                "name": "shanghai-232-gw.net.shanghai.nyu.edu",
+                "rtt": 12.2,
+                "is_destination": false,
+                "protocol": "UDP",
+                "ttl": 1
+            },
+            {
+                "ip": "10.209.64.1",
+                "name": "shanghai-232-gw.net.shanghai.nyu.edu",
+                "rtt": 13.08,
+                "is_destination": false,
+                "protocol": "TCP",
+                "ttl": 1
+            },
+            {
+                "ip": "10.209.64.1",
+                "name": "shanghai-232-gw.net.shanghai.nyu.edu",
+                "rtt": 8.57,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 1
+            }
+        ],
+        [
+            {
+                "ip": "10.213.33.33",
+                "name": "Unknown",
+                "rtt": 13.0,
+                "is_destination": false,
+                "protocol": "UDP",
+                "ttl": 2
+            },
+            {
+                "ip": "10.213.33.33",
+                "name": "Unknown",
+                "rtt": 12.65,
+                "is_destination": false,
+                "protocol": "TCP",
+                "ttl": 2
+            },
+            {
+                "ip": "10.213.33.25",
+                "name": "Unknown",
+                "rtt": 43.93,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 2
+            },
+            {
+                "ip": "10.213.33.33",
+                "name": "Unknown",
+                "rtt": 13.03,
+                "is_destination": false,
+                "protocol": "UDP",
+                "ttl": 2
+            },
+            {
+                "ip": "10.213.33.33",
+                "name": "Unknown",
+                "rtt": 13.55,
+                "is_destination": false,
+                "protocol": "TCP",
+                "ttl": 2
+            },
+            {
+                "ip": "10.213.33.25",
+                "name": "Unknown",
+                "rtt": 11.49,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 2
+            }
+        ],
+        [
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": "10.213.32.97",
+                "name": "Unknown",
+                "rtt": 15.47,
+                "is_destination": false,
+                "protocol": "TCP",
+                "ttl": 3
+            },
+            {
+                "ip": "10.213.32.97",
+                "name": "Unknown",
+                "rtt": 14.61,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 3
+            },
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": "10.213.32.97",
+                "name": "Unknown",
+                "rtt": 14.11,
+                "is_destination": false,
+                "protocol": "TCP",
+                "ttl": 3
+            },
+            {
+                "ip": "10.213.32.97",
+                "name": "Unknown",
+                "rtt": 8.75,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 3
+            }
+        ],
+        [
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": "10.213.32.70",
+                "name": "Unknown",
+                "rtt": 18.13,
+                "is_destination": false,
+                "protocol": "TCP",
+                "ttl": 4
+            },
+            {
+                "ip": "10.213.32.70",
+                "name": "Unknown",
+                "rtt": 13.67,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 4
+            },
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": "10.213.32.70",
+                "name": "Unknown",
+                "rtt": 15.6,
+                "is_destination": false,
+                "protocol": "TCP",
+                "ttl": 4
+            },
+            {
+                "ip": "10.213.32.70",
+                "name": "Unknown",
+                "rtt": 88.0,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 4
+            }
+        ],
+        [
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": "194.223.152.17",
+                "name": "Unknown",
+                "rtt": 43.96,
+                "is_destination": false,
+                "protocol": "TCP",
+                "ttl": 5
+            },
+            {
+                "ip": "194.223.152.17",
+                "name": "Unknown",
+                "rtt": 41.94,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 5
+            },
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": "194.223.152.17",
+                "name": "Unknown",
+                "rtt": 64.66,
+                "is_destination": false,
+                "protocol": "TCP",
+                "ttl": 5
+            },
+            {
+                "ip": "194.223.152.17",
+                "name": "Unknown",
+                "rtt": 44.8,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 5
+            }
+        ],
+        [
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": "193.114.182.92",
+                "name": "Unknown",
+                "rtt": 47.7,
+                "is_destination": false,
+                "protocol": "TCP",
+                "ttl": 6
+            },
+            {
+                "ip": "193.114.182.92",
+                "name": "Unknown",
+                "rtt": 85.78,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 6
+            },
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": "193.114.182.92",
+                "name": "Unknown",
+                "rtt": 44.63,
+                "is_destination": false,
+                "protocol": "TCP",
+                "ttl": 6
+            },
+            {
+                "ip": "193.114.182.92",
+                "name": "Unknown",
+                "rtt": 44.12,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 6
+            }
+        ],
+        [
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": "210.173.176.245",
+                "name": "Unknown",
+                "rtt": 38.07,
+                "is_destination": false,
+                "protocol": "TCP",
+                "ttl": 7
+            },
+            {
+                "ip": "210.173.176.245",
+                "name": "Unknown",
+                "rtt": 45.41,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 7
+            },
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": "210.173.176.245",
+                "name": "Unknown",
+                "rtt": 40.93,
+                "is_destination": false,
+                "protocol": "TCP",
+                "ttl": 7
+            },
+            {
+                "ip": "210.173.176.245",
+                "name": "Unknown",
+                "rtt": 59.13,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 7
+            }
+        ],
+        [
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": "192.178.248.173",
+                "name": "Unknown",
+                "rtt": 39.18,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 8
+            },
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": "192.178.248.173",
+                "name": "Unknown",
+                "rtt": 106.85,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 8
+            }
+        ],
+        [
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": "108.170.235.121",
+                "name": "Unknown",
+                "rtt": 80.18,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 9
+            },
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": "108.170.235.121",
+                "name": "Unknown",
+                "rtt": 43.67,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 9
+            }
+        ],
+        [
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": "8.8.8.8",
+                "name": "dns.google",
+                "rtt": 44.53,
+                "is_destination": true,
+                "protocol": "ICMP",
+                "ttl": 10
+            },
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": "8.8.8.8",
+                "name": "dns.google",
+                "rtt": 63.15,
+                "is_destination": true,
+                "protocol": "ICMP",
+                "ttl": 10
+            }
+        ]
+    ],
+    "8.8.4.4": [
+        [
+            {
+                "ip": "10.209.64.1",
+                "name": "shanghai-232-gw.net.shanghai.nyu.edu",
+                "rtt": 10.94,
+                "is_destination": false,
+                "protocol": "UDP",
+                "ttl": 1
+            },
+            {
+                "ip": "10.209.64.1",
+                "name": "shanghai-232-gw.net.shanghai.nyu.edu",
+                "rtt": 15.76,
+                "is_destination": false,
+                "protocol": "TCP",
+                "ttl": 1
+            },
+            {
+                "ip": "10.209.64.1",
+                "name": "shanghai-232-gw.net.shanghai.nyu.edu",
+                "rtt": 15.83,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 1
+            },
+            {
+                "ip": "10.209.64.1",
+                "name": "shanghai-232-gw.net.shanghai.nyu.edu",
+                "rtt": 18.61,
+                "is_destination": false,
+                "protocol": "UDP",
+                "ttl": 1
+            },
+            {
+                "ip": "10.209.64.1",
+                "name": "shanghai-232-gw.net.shanghai.nyu.edu",
+                "rtt": 10.2,
+                "is_destination": false,
+                "protocol": "TCP",
+                "ttl": 1
+            },
+            {
+                "ip": "10.209.64.1",
+                "name": "shanghai-232-gw.net.shanghai.nyu.edu",
+                "rtt": 14.08,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 1
+            }
+        ],
+        [
+            {
+                "ip": "10.213.33.33",
+                "name": "Unknown",
+                "rtt": 19.62,
+                "is_destination": false,
+                "protocol": "UDP",
+                "ttl": 2
+            },
+            {
+                "ip": "10.213.33.33",
+                "name": "Unknown",
+                "rtt": 51.65,
+                "is_destination": false,
+                "protocol": "TCP",
+                "ttl": 2
+            },
+            {
+                "ip": "10.213.33.25",
+                "name": "Unknown",
+                "rtt": 14.54,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 2
+            },
+            {
+                "ip": "10.213.33.33",
+                "name": "Unknown",
+                "rtt": 15.04,
+                "is_destination": false,
+                "protocol": "UDP",
+                "ttl": 2
+            },
+            {
+                "ip": "10.213.33.33",
+                "name": "Unknown",
+                "rtt": 13.24,
+                "is_destination": false,
+                "protocol": "TCP",
+                "ttl": 2
+            },
+            {
+                "ip": "10.213.33.25",
+                "name": "Unknown",
+                "rtt": 15.04,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 2
+            }
+        ],
+        [
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": "10.213.32.97",
+                "name": "Unknown",
+                "rtt": 76.49,
+                "is_destination": false,
+                "protocol": "TCP",
+                "ttl": 3
+            },
+            {
+                "ip": "10.213.32.97",
+                "name": "Unknown",
+                "rtt": 9.8,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 3
+            },
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": "10.213.32.97",
+                "name": "Unknown",
+                "rtt": 16.2,
+                "is_destination": false,
+                "protocol": "TCP",
+                "ttl": 3
+            },
+            {
+                "ip": "10.213.32.97",
+                "name": "Unknown",
+                "rtt": 12.45,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 3
+            }
+        ],
+        [
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": "10.213.32.70",
+                "name": "Unknown",
+                "rtt": 16.63,
+                "is_destination": false,
+                "protocol": "TCP",
+                "ttl": 4
+            },
+            {
+                "ip": "10.213.32.70",
+                "name": "Unknown",
+                "rtt": 12.81,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 4
+            },
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": "10.213.32.70",
+                "name": "Unknown",
+                "rtt": 14.78,
+                "is_destination": false,
+                "protocol": "TCP",
+                "ttl": 4
+            },
+            {
+                "ip": "10.213.32.70",
+                "name": "Unknown",
+                "rtt": 25.58,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 4
+            }
+        ],
+        [
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": "194.223.152.17",
+                "name": "Unknown",
+                "rtt": 53.5,
+                "is_destination": false,
+                "protocol": "TCP",
+                "ttl": 5
+            },
+            {
+                "ip": "194.223.152.17",
+                "name": "Unknown",
+                "rtt": 42.09,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 5
+            },
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": "194.223.152.17",
+                "name": "Unknown",
+                "rtt": 55.3,
+                "is_destination": false,
+                "protocol": "TCP",
+                "ttl": 5
+            },
+            {
+                "ip": "194.223.152.17",
+                "name": "Unknown",
+                "rtt": 45.78,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 5
+            }
+        ],
+        [
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": "193.114.182.92",
+                "name": "Unknown",
+                "rtt": 43.11,
+                "is_destination": false,
+                "protocol": "TCP",
+                "ttl": 6
+            },
+            {
+                "ip": "193.114.182.92",
+                "name": "Unknown",
+                "rtt": 47.56,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 6
+            },
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": "193.114.182.92",
+                "name": "Unknown",
+                "rtt": 47.03,
+                "is_destination": false,
+                "protocol": "TCP",
+                "ttl": 6
+            },
+            {
+                "ip": "193.114.182.92",
+                "name": "Unknown",
+                "rtt": 47.99,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 6
+            }
+        ],
+        [
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": "210.173.176.245",
+                "name": "Unknown",
+                "rtt": 44.34,
+                "is_destination": false,
+                "protocol": "TCP",
+                "ttl": 7
+            },
+            {
+                "ip": "210.173.176.245",
+                "name": "Unknown",
+                "rtt": 40.51,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 7
+            },
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": "210.173.176.245",
+                "name": "Unknown",
+                "rtt": 110.5,
+                "is_destination": false,
+                "protocol": "TCP",
+                "ttl": 7
+            },
+            {
+                "ip": "210.173.176.245",
+                "name": "Unknown",
+                "rtt": 42.83,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 7
+            }
+        ],
+        [
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": "209.85.250.107",
+                "name": "Unknown",
+                "rtt": 44.18,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 8
+            },
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": "209.85.250.107",
+                "name": "Unknown",
+                "rtt": 44.47,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 8
+            }
+        ],
+        [
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": "142.250.61.143",
+                "name": "Unknown",
+                "rtt": 42.27,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 9
+            },
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": "142.250.61.143",
+                "name": "Unknown",
+                "rtt": 53.75,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 9
+            }
+        ],
+        [
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": "8.8.4.4",
+                "name": "dns.google",
+                "rtt": 42.47,
+                "is_destination": true,
+                "protocol": "ICMP",
+                "ttl": 10
+            },
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": "8.8.4.4",
+                "name": "dns.google",
+                "rtt": 43.74,
+                "is_destination": true,
+                "protocol": "ICMP",
+                "ttl": 10
+            }
+        ]
+    ],
+    "1.1.1.1": [
+        [
+            {
+                "ip": "10.209.64.1",
+                "name": "shanghai-232-gw.net.shanghai.nyu.edu",
+                "rtt": 11.86,
+                "is_destination": false,
+                "protocol": "UDP",
+                "ttl": 1
+            },
+            {
+                "ip": "10.209.64.1",
+                "name": "shanghai-232-gw.net.shanghai.nyu.edu",
+                "rtt": 91.94,
+                "is_destination": false,
+                "protocol": "TCP",
+                "ttl": 1
+            },
+            {
+                "ip": "10.209.64.1",
+                "name": "shanghai-232-gw.net.shanghai.nyu.edu",
+                "rtt": 12.99,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 1
+            },
+            {
+                "ip": "10.209.64.1",
+                "name": "shanghai-232-gw.net.shanghai.nyu.edu",
+                "rtt": 12.97,
+                "is_destination": false,
+                "protocol": "UDP",
+                "ttl": 1
+            },
+            {
+                "ip": "10.209.64.1",
+                "name": "shanghai-232-gw.net.shanghai.nyu.edu",
+                "rtt": 7.62,
+                "is_destination": false,
+                "protocol": "TCP",
+                "ttl": 1
+            },
+            {
+                "ip": "10.209.64.1",
+                "name": "shanghai-232-gw.net.shanghai.nyu.edu",
+                "rtt": 63.72,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 1
+            }
+        ],
+        [
+            {
+                "ip": "10.213.33.25",
+                "name": "Unknown",
+                "rtt": 12.17,
+                "is_destination": false,
+                "protocol": "UDP",
+                "ttl": 2
+            },
+            {
+                "ip": "10.213.33.25",
+                "name": "Unknown",
+                "rtt": 11.92,
+                "is_destination": false,
+                "protocol": "TCP",
+                "ttl": 2
+            },
+            {
+                "ip": "10.213.33.33",
+                "name": "Unknown",
+                "rtt": 10.93,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 2
+            },
+            {
+                "ip": "10.213.33.25",
+                "name": "Unknown",
+                "rtt": 61.23,
+                "is_destination": false,
+                "protocol": "UDP",
+                "ttl": 2
+            },
+            {
+                "ip": "10.213.33.25",
+                "name": "Unknown",
+                "rtt": 11.84,
+                "is_destination": false,
+                "protocol": "TCP",
+                "ttl": 2
+            },
+            {
+                "ip": "10.213.33.33",
+                "name": "Unknown",
+                "rtt": 15.24,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 2
+            }
+        ],
+        [
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": "10.213.32.97",
+                "name": "Unknown",
+                "rtt": 16.92,
+                "is_destination": false,
+                "protocol": "TCP",
+                "ttl": 3
+            },
+            {
+                "ip": "10.213.32.97",
+                "name": "Unknown",
+                "rtt": 14.08,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 3
+            },
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": "10.213.32.97",
+                "name": "Unknown",
+                "rtt": 18.51,
+                "is_destination": false,
+                "protocol": "TCP",
+                "ttl": 3
+            },
+            {
+                "ip": "10.213.32.97",
+                "name": "Unknown",
+                "rtt": 16.95,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 3
+            }
+        ],
+        [
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": "10.213.32.70",
+                "name": "Unknown",
+                "rtt": 96.97,
+                "is_destination": false,
+                "protocol": "TCP",
+                "ttl": 4
+            },
+            {
+                "ip": "10.213.32.70",
+                "name": "Unknown",
+                "rtt": 11.17,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 4
+            },
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": "10.213.32.70",
+                "name": "Unknown",
+                "rtt": 17.41,
+                "is_destination": false,
+                "protocol": "TCP",
+                "ttl": 4
+            },
+            {
+                "ip": "10.213.32.70",
+                "name": "Unknown",
+                "rtt": 12.7,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 4
+            }
+        ],
+        [
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": "194.223.152.17",
+                "name": "Unknown",
+                "rtt": 52.82,
+                "is_destination": false,
+                "protocol": "TCP",
+                "ttl": 5
+            },
+            {
+                "ip": "194.223.152.17",
+                "name": "Unknown",
+                "rtt": 43.29,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 5
+            },
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": "194.223.152.17",
+                "name": "Unknown",
+                "rtt": 121.68,
+                "is_destination": false,
+                "protocol": "TCP",
+                "ttl": 5
+            },
+            {
+                "ip": "194.223.152.17",
+                "name": "Unknown",
+                "rtt": 49.64,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 5
+            }
+        ],
+        [
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": "193.114.182.92",
+                "name": "Unknown",
+                "rtt": 44.37,
+                "is_destination": false,
+                "protocol": "TCP",
+                "ttl": 6
+            },
+            {
+                "ip": "193.114.182.92",
+                "name": "Unknown",
+                "rtt": 52.46,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 6
+            },
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": "193.114.182.92",
+                "name": "Unknown",
+                "rtt": 43.57,
+                "is_destination": false,
+                "protocol": "TCP",
+                "ttl": 6
+            },
+            {
+                "ip": "193.114.182.92",
+                "name": "Unknown",
+                "rtt": 48.1,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 6
+            }
+        ],
+        [
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": "210.171.224.134",
+                "name": "Unknown",
+                "rtt": 49.5,
+                "is_destination": false,
+                "protocol": "TCP",
+                "ttl": 7
+            },
+            {
+                "ip": "210.171.224.134",
+                "name": "Unknown",
+                "rtt": 44.9,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 7
+            },
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": "210.171.224.134",
+                "name": "Unknown",
+                "rtt": 122.45,
+                "is_destination": false,
+                "protocol": "TCP",
+                "ttl": 7
+            },
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            }
+        ],
+        [
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": "103.22.201.119",
+                "name": "Unknown",
+                "rtt": 48.3,
+                "is_destination": false,
+                "protocol": "TCP",
+                "ttl": 8
+            },
+            {
+                "ip": "103.22.201.123",
+                "name": "Unknown",
+                "rtt": 50.22,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 8
+            },
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": "103.22.201.119",
+                "name": "Unknown",
+                "rtt": 108.27,
+                "is_destination": false,
+                "protocol": "TCP",
+                "ttl": 8
+            },
+            {
+                "ip": "103.22.201.123",
+                "name": "Unknown",
+                "rtt": 42.26,
+                "is_destination": false,
+                "protocol": "ICMP",
+                "ttl": 8
+            }
+        ],
+        [
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": "1.1.1.1",
+                "name": "one.one.one.one",
+                "rtt": 123.0,
+                "is_destination": true,
+                "protocol": "ICMP",
+                "ttl": 9
+            },
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": null,
+                "name": "*",
+                "rtt": 0.0,
+                "is_destination": false
+            },
+            {
+                "ip": "1.1.1.1",
+                "name": "one.one.one.one",
+                "rtt": 41.89,
+                "is_destination": true,
+                "protocol": "ICMP",
+                "ttl": 9
+            }
+        ]
+    ]
+}
