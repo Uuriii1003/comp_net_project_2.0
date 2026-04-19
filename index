@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Internet Topology Explorer</title>
     <style>
-        /* Modern CSS Reset & Variables */
         :root {
             --bg-color: #0f111a;
             --card-bg: #1e2130;
@@ -17,7 +16,6 @@
             --success: #10b981;
             --error: #ef4444;
         }
-
         body {
             font-family: 'Segoe UI', system-ui, sans-serif;
             background-color: var(--bg-color);
@@ -27,7 +25,6 @@
             padding: 40px 20px;
             margin: 0;
         }
-
         .panel {
             background: var(--card-bg);
             padding: 30px;
@@ -37,48 +34,30 @@
             max-width: 450px;
             border: 1px solid var(--border);
         }
-
         h2 { margin-top: 0; font-size: 1.5rem; border-bottom: 1px solid var(--border); padding-bottom: 15px; }
         .form-group { margin-bottom: 20px; }
         label { display: block; margin-bottom: 8px; font-size: 0.9rem; font-weight: 600; color: var(--text-muted); }
-
-        /* Inputs & Selects */
         input[type="text"], input[type="number"], select {
             width: 100%; padding: 12px; border-radius: 6px; border: 1px solid var(--border);
             background: var(--bg-color); color: var(--text-main); font-size: 1rem;
             box-sizing: border-box; transition: border 0.3s ease;
         }
         input:focus, select:focus { outline: none; border-color: var(--primary); }
-
-        /* Checkbox styling */
-        .checkbox-group {
-            display: flex; align-items: center; gap: 10px; cursor: pointer; color: var(--text-main);
-        }
+        .checkbox-group { display: flex; align-items: center; gap: 10px; cursor: pointer; color: var(--text-main); }
         .checkbox-group input[type="checkbox"] { width: 18px; height: 18px; cursor: pointer; }
-
-        /* Advanced Options Collapsible */
         details {
             background: rgba(255,255,255,0.02); border: 1px solid var(--border);
             border-radius: 6px; padding: 10px 15px; margin-bottom: 20px;
         }
-        summary {
-            font-weight: bold; cursor: pointer; color: var(--text-muted); outline: none;
-        }
-        .advanced-grid {
-            display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 15px;
-        }
-
-        /* File Upload */
+        summary { font-weight: bold; cursor: pointer; color: var(--text-muted); outline: none; }
+        .advanced-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 15px; }
         .file-upload-wrapper { position: relative; overflow: hidden; display: inline-block; width: 100%; }
         .file-upload-wrapper input[type="file"] { font-size: 100px; position: absolute; left: 0; top: 0; opacity: 0; cursor: pointer; }
         .btn-file { display: block; width: 100%; padding: 12px; border: 1px dashed var(--text-muted); border-radius: 6px; text-align: center; color: var(--text-muted); transition: 0.3s; box-sizing: border-box; background: rgba(255,255,255,0.02); }
         .file-upload-wrapper:hover .btn-file { border-color: var(--primary); color: var(--text-main); }
-
         .divider { display: flex; align-items: center; text-align: center; margin: 20px 0; color: var(--border); }
         .divider::before, .divider::after { content: ''; flex: 1; border-bottom: 1px solid var(--border); }
         .divider span { padding: 0 10px; font-size: 0.8rem; font-weight: bold; }
-
-        /* Action Button */
         .btn-submit {
             background: var(--primary); color: white; border: none; padding: 14px;
             width: 100%; border-radius: 6px; font-size: 1rem; font-weight: bold;
@@ -87,215 +66,259 @@
         }
         .btn-submit:hover { background: var(--primary-hover); }
         .btn-submit:disabled { background: var(--border); cursor: not-allowed; }
-
         #feedback-box { margin-top: 20px; padding: 15px; border-radius: 6px; font-size: 0.9rem; display: none; word-wrap: break-word; }
-        .status-success { background: rgba(16, 185, 129, 0.1); color: var(--success); border: 1px solid var(--success); }
-        .status-error { background: rgba(239, 68, 68, 0.1); color: var(--error); border: 1px solid var(--error); }
-        .status-loading { background: rgba(99, 102, 241, 0.1); color: var(--primary); border: 1px solid var(--primary); }
-
+        .status-success { background: rgba(16,185,129,0.1); color: var(--success); border: 1px solid var(--success); }
+        .status-error   { background: rgba(239,68,68,0.1);  color: var(--error);   border: 1px solid var(--error); }
+        .status-loading { background: rgba(99,102,241,0.1); color: var(--primary); border: 1px solid var(--primary); }
         .spinner {
             border: 3px solid rgba(255,255,255,0.3); border-radius: 50%;
             border-top: 3px solid white; width: 16px; height: 16px;
             animation: spin 1s linear infinite; display: none;
         }
-        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        @keyframes spin { 0%{transform:rotate(0deg)} 100%{transform:rotate(360deg)} }
+
+        /* Map nodes table */
+        #results-table { width: 100%; border-collapse: collapse; margin-top: 16px; font-size: 0.85rem; display: none; }
+        #results-table th { text-align: left; color: var(--text-muted); border-bottom: 1px solid var(--border); padding: 6px 8px; }
+        #results-table td { padding: 6px 8px; border-bottom: 1px solid rgba(255,255,255,0.04); }
+        #results-table tr:last-child td { border-bottom: none; }
     </style>
 </head>
 <body>
+<div class="panel">
+    <h2>Topology Input</h2>
 
-    <div class="panel">
-        <h2>🌐 Topology Input</h2>
-        
-        <div class="form-group">
-            <label for="ip-input">Target IP or Domain</label>
-            <input type="text" id="ip-input" placeholder="e.g., 8.8.8.8" />
-        </div>
-
-        <div class="divider"><span>OR</span></div>
-
-        <div class="form-group">
-            <label>Batch Upload</label>
-            <div class="file-upload-wrapper">
-                <span class="btn-file" id="file-label">📄 Click to upload targets.txt</span>
-                <input type="file" id="file-input" accept=".txt" />
-            </div>
-        </div>
-
-        <details>
-            <summary>Advanced Traceroute Options</summary>
-            <div class="advanced-grid">
-                <div>
-                    <label for="protocol-input">Protocol (-P)</label>
-                    <select id="protocol-input">
-                        <option value="ICMP">ICMP</option>
-                        <option value="UDP" selected>UDP</option>
-                        <option value="TCP">TCP</option>
-                    </select>
-                </div>
-                <div>
-                    <label for="port-input">Dest Port (-p)</label>
-                    <input type="number" id="port-input" placeholder="Default" />
-                </div>
-                <div>
-                    <label for="ttl-input">Max TTL (-m)</label>
-                    <input type="number" id="ttl-input" value="30" min="1" max="255" />
-                </div>
-                <div>
-                    <label for="probes-input">Probes/Hop (-q)</label>
-                    <input type="number" id="probes-input" value="3" min="1" max="10" />
-                </div>
-            </div>
-            <div style="margin-top: 15px;">
-                <label class="checkbox-group">
-                    <input type="checkbox" id="dns-checkbox" checked />
-                    Resolve DNS Nodes (-n modifier)
-                </label>
-            </div>
-        </details>
-
-        <button id="run-btn" class="btn-submit">
-            <span id="btn-text">🚀 Start Traceroute</span>
-            <div class="spinner" id="spinner"></div>
-        </button>
-
-        <div id="feedback-box"></div>
+    <div class="form-group">
+        <label for="ip-input">Target IP or Domain</label>
+        <input type="text" id="ip-input" placeholder="e.g., 8.8.8.8" />
     </div>
 
-    <script>
-        const ipInput = document.getElementById('ip-input');
-        const fileInput = document.getElementById('file-input');
-        const fileLabel = document.getElementById('file-label');
-        
-        // New Option Inputs
-        const protocolInput = document.getElementById('protocol-input');
-        const portInput = document.getElementById('port-input');
-        const ttlInput = document.getElementById('ttl-input');
-        const probesInput = document.getElementById('probes-input');
-        const dnsCheckbox = document.getElementById('dns-checkbox');
-        
-        const runBtn = document.getElementById('run-btn');
-        const btnText = document.getElementById('btn-text');
-        const spinner = document.getElementById('spinner');
-        const feedbackBox = document.getElementById('feedback-box');
+    <div class="divider"><span>OR</span></div>
 
-        fileInput.addEventListener('change', (e) => {
-            if (e.target.files.length > 0) {
-                fileLabel.innerText = `📄 ${e.target.files[0].name}`;
-                fileLabel.style.color = "var(--text-main)";
-                fileLabel.style.borderColor = "var(--primary)";
-                ipInput.value = ""; 
+    <div class="form-group">
+        <label>Batch Upload</label>
+        <div class="file-upload-wrapper">
+            <span class="btn-file" id="file-label">Click to upload targets.txt</span>
+            <input type="file" id="file-input" accept=".txt" />
+        </div>
+    </div>
+
+    <details>
+        <summary>Advanced Traceroute Options</summary>
+        <div class="advanced-grid">
+            <div>
+                <label for="ttl-input">Max TTL (-m)</label>
+                <input type="number" id="ttl-input" value="30" min="1" max="255" />
+            </div>
+            <div>
+                <label for="probes-input">Series/Hop (-n)</label>
+                <input type="number" id="probes-input" value="1" min="1" max="10" />
+            </div>
+            <div>
+                <label for="port-input">Dest Port (-p)</label>
+                <input type="number" id="port-input" value="33434" />
+            </div>
+            <div>
+                <label for="timeout-input">Timeout (s) (-t)</label>
+                <input type="number" id="timeout-input" value="2" min="1" max="10" />
+            </div>
+        </div>
+    </details>
+
+    <button id="run-btn" class="btn-submit">
+        <span id="btn-text">Start Traceroute</span>
+        <div class="spinner" id="spinner"></div>
+    </button>
+
+    <div id="feedback-box"></div>
+
+    <!-- FIX: Show extracted map nodes so the user can verify data is flowing -->
+    <table id="results-table">
+        <thead><tr><th>#</th><th>IP</th><th>City</th><th>RTT (ms)</th></tr></thead>
+        <tbody id="results-body"></tbody>
+    </table>
+</div>
+
+<script>
+    const ipInput      = document.getElementById('ip-input');
+    const fileInput    = document.getElementById('file-input');
+    const fileLabel    = document.getElementById('file-label');
+    const ttlInput     = document.getElementById('ttl-input');
+    const probesInput  = document.getElementById('probes-input');
+    const portInput    = document.getElementById('port-input');
+    const timeoutInput = document.getElementById('timeout-input');
+    const runBtn       = document.getElementById('run-btn');
+    const btnText      = document.getElementById('btn-text');
+    const spinner      = document.getElementById('spinner');
+    const feedbackBox  = document.getElementById('feedback-box');
+    const resultsTable = document.getElementById('results-table');
+    const resultsBody  = document.getElementById('results-body');
+
+    fileInput.addEventListener('change', (e) => {
+        if (e.target.files.length > 0) {
+            fileLabel.textContent = e.target.files[0].name;
+            fileLabel.style.color = 'var(--text-main)';
+            fileLabel.style.borderColor = 'var(--primary)';
+            ipInput.value = '';
+        } else {
+            fileLabel.textContent = 'Click to upload targets.txt';
+            fileLabel.style.color = 'var(--text-muted)';
+        }
+    });
+
+    ipInput.addEventListener('input', () => {
+        if (ipInput.value.length > 0) {
+            fileInput.value = '';
+            fileLabel.textContent = 'Click to upload targets.txt';
+            fileLabel.style.color = 'var(--text-muted)';
+            fileLabel.style.borderColor = 'var(--text-muted)';
+        }
+    });
+
+    function showFeedback(message, type) {
+        feedbackBox.style.display = 'block';
+        feedbackBox.className = `status-${type}`;
+        feedbackBox.textContent = message;
+    }
+
+    function toggleLoading(isLoading) {
+        runBtn.disabled = isLoading;
+        spinner.style.display = isLoading ? 'block' : 'none';
+        btnText.textContent = isLoading ? 'Processing...' : 'Start Traceroute';
+    }
+
+    // --- FIX: toMapPath() now reads the actual results.json shape ---
+    // Old code expected data.hops[i].measurements.ICMP.rtt — a structure
+    // that does not exist. results.json is keyed by target IP, each value
+    // is an array-of-arrays: data[targetIp][hopIndex][probeIndex].
+    // This function flattens that into a list of geo-valid map points.
+    function toMapPath(data) {
+        const points = [];
+        for (const [targetIp, hops] of Object.entries(data)) {
+            for (const hopSeries of hops) {
+                // Each hopSeries is an array of probes (UDP, TCP, ICMP)
+                // Pick the first probe that has both an IP and geo coordinates
+                const probe = hopSeries.find(p => p.ip && p.geo && p.geo.lat && p.geo.lon);
+                if (!probe) continue;
+                points.push({
+                    lat:      probe.geo.lat,
+                    lon:      probe.geo.lon,
+                    ip:       probe.ip,
+                    city:     probe.geo.city || 'Unknown',
+                    rtt:      probe.rtt,
+                    protocol: probe.protocol,
+                    target:   targetIp
+                });
+            }
+        }
+        return points;
+    }
+
+    // --- FIX: API calls now use the correct endpoint names and parameter names
+    // matching what main.py actually accepts (max_ttl, num_series, port, timeout).
+    // Old code used 'probes', 'resolveDns', 'protocol' which main.py doesn't know. ---
+    async function getTrace(ip, options) {
+        const params = new URLSearchParams({
+            target:     ip,
+            max_ttl:    options.max_ttl,
+            num_series: options.num_series,
+            port:       options.port,
+            timeout:    options.timeout
+        });
+        const res = await fetch(`/trace?${params.toString()}`);
+        if (!res.ok) {
+            const text = await res.text();
+            throw new Error(`Backend error ${res.status}: ${text}`);
+        }
+        return res.json();
+    }
+
+    async function fetchBatchTrace(targetsText, options) {
+        const res = await fetch('/trace-batch', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            // --- FIX: Send options with the correct key names ---
+            body: JSON.stringify({
+                targets:    targetsText,
+                max_ttl:    options.max_ttl,
+                num_series: options.num_series,
+                port:       options.port,
+                timeout:    options.timeout
+            })
+        });
+        if (!res.ok) {
+            const text = await res.text();
+            throw new Error(`Backend batch error ${res.status}: ${text}`);
+        }
+        return res.json();
+    }
+
+    function readFile(file) {
+        return new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.onload  = e => resolve(e.target.result);
+            reader.onerror = () => reject(new Error('Could not read file'));
+            reader.readAsText(file);
+        });
+    }
+
+    runBtn.addEventListener('click', async () => {
+        const ip   = ipInput.value.trim();
+        const file = fileInput.files[0];
+
+        if (!ip && !file) {
+            showFeedback('Please enter an IP address or upload a file.', 'error');
+            return;
+        }
+
+        // Collect options using the correct parameter names
+        const options = {
+            max_ttl:    ttlInput.value,
+            num_series: probesInput.value,
+            port:       portInput.value,
+            timeout:    timeoutInput.value
+        };
+
+        toggleLoading(true);
+        resultsTable.style.display = 'none';
+        resultsBody.innerHTML = '';
+
+        try {
+            let rawData;
+
+            if (file) {
+                showFeedback(`Reading ${file.name} and sending to backend...`, 'loading');
+                const fileContent = await readFile(file);
+                rawData = await fetchBatchTrace(fileContent, options);
             } else {
-                fileLabel.innerText = "📄 Click to upload targets.txt";
-                fileLabel.style.color = "var(--text-muted)";
-            }
-        });
-
-        ipInput.addEventListener('input', () => {
-            if(ipInput.value.length > 0) {
-                fileInput.value = "";
-                fileLabel.innerText = "📄 Click to upload targets.txt";
-                fileLabel.style.color = "var(--text-muted)";
-                fileLabel.style.borderColor = "var(--text-muted)";
-            }
-        });
-
-        function showFeedback(message, type) {
-            feedbackBox.style.display = "block";
-            feedbackBox.className = `status-${type}`;
-            feedbackBox.innerText = message;
-        }
-
-        function toggleLoading(isLoading) {
-            runBtn.disabled = isLoading;
-            spinner.style.display = isLoading ? "block" : "none";
-            btnText.innerText = isLoading ? "Processing..." : "🚀 Start Traceroute";
-        }
-
-        runBtn.addEventListener('click', async () => {
-            const ip = ipInput.value.trim();
-            const file = fileInput.files[0];
-
-            // Gather all options into a configuration object
-            const traceOptions = {
-                ttl: ttlInput.value,
-                protocol: protocolInput.value,
-                port: portInput.value, // Can be empty, let backend handle default
-                probes: probesInput.value,
-                resolveDns: dnsCheckbox.checked
-            };
-
-            if (!ip && !file) {
-                showFeedback("Please enter an IP or upload a file.", "error");
-                return;
+                showFeedback(`Tracing route to ${ip}...`, 'loading');
+                rawData = await getTrace(ip, options);
             }
 
-            toggleLoading(true);
+            const mapPoints = toMapPath(rawData);
 
-            try {
-                let rawData;
-
-                if (file) {
-                    showFeedback(`Reading ${file.name} and sending to backend...`, "loading");
-                    const fileContent = await readFile(file);
-                    rawData = await fetchBatchTrace(fileContent, traceOptions);
-                } else {
-                    showFeedback(`Tracing route to ${ip}...`, "loading");
-                    rawData = await getTrace(ip, traceOptions);
-                }
-
-                // Transform data for map
-                const cleanData = toMapPath(rawData);
-                
-                showFeedback(`Success! Extracted ${cleanData.length} valid map nodes.`, "success");
-                console.log("👉 Data ready for Map:", cleanData);
-
-            } catch (error) {
-                showFeedback(`Error: ${error.message}`, "error");
-            } finally {
-                toggleLoading(false);
+            if (mapPoints.length === 0) {
+                showFeedback('Traceroute completed but no geo-located hops were found. Check results.json.', 'error');
+            } else {
+                showFeedback(`Done! Found ${mapPoints.length} geo-located hop(s).`, 'success');
+                // Render results table
+                resultsTable.style.display = 'table';
+                mapPoints.forEach((pt, i) => {
+                    const row = resultsBody.insertRow();
+                    row.insertCell().textContent = i + 1;
+                    row.insertCell().textContent = pt.ip;
+                    row.insertCell().textContent = pt.city;
+                    row.insertCell().textContent = pt.rtt != null ? pt.rtt.toFixed(2) : '—';
+                });
+                console.log('Map data ready:', mapPoints);
             }
-        });
 
-        // --- API & Data Transformation Functions ---
-        
-        async function getTrace(ip, options) {
-            // Using URLSearchParams makes building the GET query much cleaner
-            const params = new URLSearchParams({ target: ip, ...options });
-            const res = await fetch(`/trace?${params.toString()}`);
-            if (!res.ok) throw new Error("Backend request failed");
-            return await res.json();
+        } catch (err) {
+            showFeedback(`Error: ${err.message}`, 'error');
+        } finally {
+            toggleLoading(false);
         }
-
-        async function fetchBatchTrace(targetsText, options) {
-            const res = await fetch('/trace-batch', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ targets: targetsText, options: options })
-            });
-            if (!res.ok) throw new Error("Backend batch request failed");
-            return await res.json();
-        }
-
-        function readFile(file) {
-            return new Promise((resolve, reject) => {
-                const reader = new FileReader();
-                reader.onload = e => resolve(e.target.result);
-                reader.onerror = e => reject(e);
-                reader.readAsText(file);
-            });
-        }
-
-        function toMapPath(data) {
-            if (!data || !data.hops) return [];
-            return data.hops
-                .filter(h => h.geo)
-                .map(h => ({
-                    lat: h.geo.lat,
-                    lon: h.geo.lon,
-                    ip: h.ip,
-                    rtt: h.measurements?.ICMP?.rtt || h.measurements?.TCP?.rtt || h.measurements?.UDP?.rtt || null
-                }));
-        }
-    </script>
+    });
+</script>
 </body>
 </html>
