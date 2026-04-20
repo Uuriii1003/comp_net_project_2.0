@@ -84,62 +84,6 @@
             "lon": -77.5,
             "city": "Ashburn",
             "group": 3
-        },
-        {
-            "id": "209.85.250.107",
-            "name": "Unknown",
-            "lat": 37.4225,
-            "lon": -122.085,
-            "city": "Mountain View",
-            "group": 2
-        },
-        {
-            "id": "142.250.61.143",
-            "name": "Unknown",
-            "lat": 37.4225,
-            "lon": -122.085,
-            "city": "Mountain View",
-            "group": 2
-        },
-        {
-            "id": "8.8.4.4",
-            "name": "dns.google",
-            "lat": 39.03,
-            "lon": -77.5,
-            "city": "Ashburn",
-            "group": 3
-        },
-        {
-            "id": "10.213.33.33",
-            "name": "Unknown",
-            "lat": null,
-            "lon": null,
-            "city": "Internal Network",
-            "group": 2
-        },
-        {
-            "id": "210.171.224.134",
-            "name": "Unknown",
-            "lat": 35.6916,
-            "lon": 139.768,
-            "city": "Chiyoda City",
-            "group": 2
-        },
-        {
-            "id": "103.22.201.131",
-            "name": "Unknown",
-            "lat": 35.6761,
-            "lon": 139.6503,
-            "city": "Tokyo",
-            "group": 2
-        },
-        {
-            "id": "1.1.1.1",
-            "name": "one.one.one.one",
-            "lat": -27.4766,
-            "lon": 153.0166,
-            "city": "South Brisbane",
-            "group": 3
         }
     ],
     "links": [
@@ -147,175 +91,61 @@
             "source": "localhost",
             "target": "10.209.64.1",
             "protocol": "UDP",
-            "rtt": 11.64
+            "rtt": 15.68
         },
         {
             "source": "10.209.64.1",
             "target": "10.213.33.25",
             "protocol": "UDP",
-            "rtt": 10.72
+            "rtt": 13.06
         },
         {
             "source": "10.213.33.25",
             "target": "10.213.32.97",
             "protocol": "TCP",
-            "rtt": 10.82
+            "rtt": 61.52
         },
         {
             "source": "10.213.32.97",
             "target": "10.213.32.70",
             "protocol": "TCP",
-            "rtt": 10.1
+            "rtt": 15.88
         },
         {
             "source": "10.213.32.70",
             "target": "194.223.152.17",
             "protocol": "TCP",
-            "rtt": 46.28
+            "rtt": 39.01
         },
         {
             "source": "194.223.152.17",
             "target": "193.114.182.92",
             "protocol": "TCP",
-            "rtt": 198.23
+            "rtt": 43.86
         },
         {
             "source": "193.114.182.92",
             "target": "210.173.176.245",
             "protocol": "TCP",
-            "rtt": 45.08
+            "rtt": 42.56
         },
         {
             "source": "210.173.176.245",
             "target": "192.178.248.173",
             "protocol": "ICMP",
-            "rtt": 40.85
+            "rtt": 43.58
         },
         {
             "source": "192.178.248.173",
             "target": "108.170.235.121",
             "protocol": "ICMP",
-            "rtt": 44.89
+            "rtt": 65.39
         },
         {
             "source": "108.170.235.121",
             "target": "8.8.8.8",
             "protocol": "ICMP",
-            "rtt": 41.15
-        },
-        {
-            "source": "localhost",
-            "target": "10.209.64.1",
-            "protocol": "UDP",
-            "rtt": 11.34
-        },
-        {
-            "source": "10.209.64.1",
-            "target": "10.213.33.25",
-            "protocol": "UDP",
-            "rtt": 51.92
-        },
-        {
-            "source": "10.213.33.25",
-            "target": "10.213.32.97",
-            "protocol": "TCP",
-            "rtt": 9.68
-        },
-        {
-            "source": "10.213.32.97",
-            "target": "10.213.32.70",
-            "protocol": "TCP",
-            "rtt": 15.96
-        },
-        {
-            "source": "10.213.32.70",
-            "target": "194.223.152.17",
-            "protocol": "TCP",
-            "rtt": 95.76
-        },
-        {
-            "source": "194.223.152.17",
-            "target": "193.114.182.92",
-            "protocol": "TCP",
-            "rtt": 42.05
-        },
-        {
-            "source": "193.114.182.92",
-            "target": "210.173.176.245",
-            "protocol": "TCP",
-            "rtt": 45.69
-        },
-        {
-            "source": "210.173.176.245",
-            "target": "209.85.250.107",
-            "protocol": "ICMP",
-            "rtt": 91.39
-        },
-        {
-            "source": "209.85.250.107",
-            "target": "142.250.61.143",
-            "protocol": "ICMP",
-            "rtt": 41.75
-        },
-        {
-            "source": "142.250.61.143",
-            "target": "8.8.4.4",
-            "protocol": "ICMP",
-            "rtt": 42.09
-        },
-        {
-            "source": "localhost",
-            "target": "10.209.64.1",
-            "protocol": "UDP",
-            "rtt": 11.04
-        },
-        {
-            "source": "10.209.64.1",
-            "target": "10.213.33.33",
-            "protocol": "UDP",
-            "rtt": 12.0
-        },
-        {
-            "source": "10.213.33.33",
-            "target": "10.213.32.97",
-            "protocol": "TCP",
-            "rtt": 20.45
-        },
-        {
-            "source": "10.213.32.97",
-            "target": "10.213.32.70",
-            "protocol": "TCP",
-            "rtt": 13.06
-        },
-        {
-            "source": "10.213.32.70",
-            "target": "194.223.152.17",
-            "protocol": "TCP",
-            "rtt": 42.43
-        },
-        {
-            "source": "194.223.152.17",
-            "target": "193.114.182.92",
-            "protocol": "TCP",
-            "rtt": 44.39
-        },
-        {
-            "source": "193.114.182.92",
-            "target": "210.171.224.134",
-            "protocol": "TCP",
-            "rtt": 38.21
-        },
-        {
-            "source": "210.171.224.134",
-            "target": "103.22.201.131",
-            "protocol": "TCP",
-            "rtt": 48.05
-        },
-        {
-            "source": "103.22.201.131",
-            "target": "1.1.1.1",
-            "protocol": "ICMP",
-            "rtt": 40.88
+            "rtt": 44.47
         }
     ]
 }

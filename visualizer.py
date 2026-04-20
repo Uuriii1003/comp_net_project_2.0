@@ -2,215 +2,170 @@ import subprocess
 import sys
 import json
 import os
-import ipaddress
 import streamlit as st
 import folium
 from streamlit_folium import st_folium
+from folium.plugins import AntPath
+import time
+
+# --- 1. CORE LOGIC: RAW OUTPUT GENERATOR ---
+def generate_raw_from_topology(topo_data):
+    """Generates a CLI-style text block matching your raw output screenshots."""
+    nodes = {n['id']: n for n in topo_data['nodes']}
+    links = topo_data['links']
+    dest = topo_data['nodes'][-1]['id']
+    output = f"traceroute to {dest} ({dest}), 30 hops max, 60 byte packets\n"
+    
+    for i, link in enumerate(links):
+        hop_num = i + 1
+        target_id = link['target']
+        node_info = nodes.get(target_id, {})
+        hostname = node_info.get('name', 'Unknown')
+        ip = node_info.get('id', '*')
+        rtt = link.get('rtt', 0.0)
+        
+        if ip != "*":
+            output += f"{hop_num:2}  {hostname} ({ip})  {rtt} ms  {rtt} ms  {rtt} ms\n"
+        else:
+            output += f"{hop_num:2}  * * *\n"
+    return output
+
+# --- 2. UTILITY: NETWORK METRICS ---
+def get_hop_loss(hop_series):
+    if not hop_series: return 0
+    timeouts = sum(1 for probe in hop_series if not probe.get("ip"))
+    return round((timeouts / len(hop_series)) * 100, 1)
 
 st.set_page_config(layout="wide", page_title="Internet Topology Explorer")
-st.title("Internet Topology Explorer")
 
-# ── SIDEBAR ────────────────────────────────────────────────────────────────────
+# --- 3. UI STATE MANAGEMENT ---
+if 'trace_done' not in st.session_state: st.session_state.trace_done = False
+if 'active_path' not in st.session_state: st.session_state.active_path = []
+if 'map_key' not in st.session_state: st.session_state.map_key = 0
+if 'map_center' not in st.session_state: st.session_state.map_center = [20, 0]
+if 'map_zoom' not in st.session_state: st.session_state.map_zoom = 2
+
+st.title("🛰️ Internet Topology Explorer")
+
+# --- 4. SIDEBAR CONTROLS ---
 with st.sidebar:
-    st.header("Target")
-
-    # Single IP input (from index.html)
+    st.header("Step 1: Input Target")
     single_ip = st.text_input("Single IP address", placeholder="e.g. 8.8.8.8")
-
-    st.markdown("<div style='text-align:center;color:gray;margin:4px 0'>— OR —</div>", unsafe_allow_html=True)
-
-    # Batch file upload
-    target_file = st.file_uploader("Batch upload targets.txt", type=["txt"])
+    target_file = st.file_uploader("Batch upload targets.txt", type=["txt", "csv"])
 
     st.divider()
-    st.header("Traceroute Options")
-
+    st.header("Step 2: Customize Arguments")
     col1, col2 = st.columns(2)
     with col1:
-        min_ttl    = st.number_input("Min TTL",      min_value=1,  max_value=30,  value=1)
-        num_series = st.number_input("Series/Hop",   min_value=1,  max_value=5,   value=1,
-                                     help="Number of probe rounds per hop")
-        pkt_size   = st.number_input("Packet size",  min_value=28, max_value=512, value=60,
-                                     help="Total IP payload bytes")
+        min_ttl = st.number_input("Min TTL", 1, 30, 1)
+        num_series = st.number_input("Probes/Hop", 1, 10, 3)
+        pkt_size = st.number_input("Packet size", 28, 512, 60)
     with col2:
-        max_ttl    = st.number_input("Max TTL",      min_value=1,  max_value=60,  value=30)
-        timeout    = st.number_input("Timeout (s)",  min_value=1,  max_value=10,  value=2)
-        port       = st.number_input("Dest port",    min_value=1,  max_value=65535, value=33434)
-
-    wait = st.slider("Wait between packets (s)", min_value=0.0, max_value=2.0,
-                     value=0.2, step=0.1)
-
+        max_ttl = st.number_input("Max TTL", 1, 60, 20)
+        timeout = st.number_input("Timeout (s)", 1, 10, 2)
+        port = st.number_input("Dest port", 1, 65535, 33434)
+    
     st.divider()
+    st.header("Protocol Analysis Filter")
+    show_udp = st.checkbox("UDP", value=True)
+    show_tcp = st.checkbox("TCP", value=True)
+    show_icmp = st.checkbox("ICMP", value=True)
+    
+    run_btn = st.button("🚀 Launch Traceroute", type="primary", use_container_width=True)
 
-    run_btn = st.button("Start Traceroute", type="primary", use_container_width=True)
+# --- 5. EXECUTION ---
+if run_btn:
+    st.session_state.trace_done = False
+    tmp_path = "targets_current.txt"
+    if single_ip.strip():
+        with open(tmp_path, "w") as f: f.write(single_ip.strip())
+    else:
+        with open(tmp_path, "wb") as f: f.write(target_file.read())
 
-    # ── RUN LOGIC ────────────────────────────────────────────────────────────
-    if run_btn:
-        # Validate: need either a single IP or a file
-        if not single_ip.strip() and target_file is None:
-            st.error("Enter an IP address or upload a targets.txt file.")
-            st.stop()
+    cmd = ["sudo", sys.executable, "main.py", tmp_path, "-min", str(min_ttl), "-m", str(max_ttl),
+           "-n", str(num_series), "-p", str(port), "-s", str(pkt_size), "-t", str(timeout)]
+    
+    bar = st.progress(0)
+    proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
+    for i in range(100):
+        time.sleep(0.04)
+        bar.progress(i + 1)
+    proc.wait()
+    st.session_state.trace_done = True
+    st.rerun()
 
-        # If single IP typed, validate it and write a temp file
-        if single_ip.strip():
-            try:
-                ipaddress.ip_address(single_ip.strip())
-            except ValueError:
-                st.error(f"'{single_ip.strip()}' is not a valid IP address.")
-                st.stop()
-            tmp_path = "/tmp/targets_single.txt"
-            with open(tmp_path, "w") as f:
-                f.write(single_ip.strip() + "\n")
+# --- 6. DATA LOADING ---
+data, topo_data = {}, {}
+if st.session_state.trace_done:
+    if os.path.exists("results.json"):
+        with open("results.json", "r") as f: data = json.load(f)
+    if os.path.exists("topology.json"):
+        with open("topology.json", "r") as f: topo_data = json.load(f)
 
-        # If file uploaded, save it to disk
-        if target_file is not None:
-            tmp_path = "/tmp/targets_uploaded.txt"
-            with open(tmp_path, "wb") as f:
-                f.write(target_file.read())
-
-        cmd = [
-            "sudo", sys.executable, "main.py", tmp_path,
-            "--min_ttl",    str(min_ttl),
-            "--max_ttl",    str(max_ttl),
-            "--num_series", str(num_series),
-            "--port",       str(port),
-            "--size",       str(pkt_size),
-            "--wait",       str(wait),
-            "--timeout",    str(timeout),
-        ]
-
-        st.info("Running traceroute — this may take a minute...")
-        log_area  = st.empty()
-        log_lines = []
-
-        try:
-            proc = subprocess.Popen(
-                cmd,
-                stdout=subprocess.PIPE,
-                stderr=subprocess.STDOUT,
-                text=True
-            )
-            for line in proc.stdout:
-                log_lines.append(line.rstrip())
-                log_area.code("\n".join(log_lines), language="text")
-            proc.wait()
-
-            if proc.returncode == 0:
-                # Regenerate topology.json automatically
-                try:
-                    from generate_viz import process_for_viz
-                    process_for_viz("results.json", "topology.json")
-                except Exception as e:
-                    st.warning(f"topology.json not updated: {e}")
-                st.success("Done! Map updated below.")
-                st.rerun()
-            else:
-                st.error(f"main.py exited with code {proc.returncode}.")
-
-        except FileNotFoundError:
-            st.error("Could not find main.py. Run visualizer.py from the project directory.")
-        except PermissionError:
-            st.error("sudo permission denied. Add your user to sudoers.")
-
-# ── LOAD DATA ──────────────────────────────────────────────────────────────────
-data = None
-if os.path.exists("results.json"):
-    try:
-        with open("results.json", "r") as f:
-            data = json.load(f)
-    except json.JSONDecodeError:
-        st.warning("results.json is malformed — re-run the traceroute.")
-
-# ── MAIN LAYOUT ────────────────────────────────────────────────────────────────
-col_map, col_out = st.columns([2, 1])
+# --- 7. MAIN LAYOUT: MAP & ANALYZER ---
+col_map, col_out = st.columns([1.3, 1.2])
 
 with col_map:
-    st.subheader("Interactive Topology Map")
+    st.subheader("Step 4: Interactive Topology Map")
+    m = folium.Map(location=st.session_state.map_center, zoom_start=st.session_state.map_zoom, tiles="CartoDB dark_matter")
+    
+    if st.session_state.active_path:
+        for pt in st.session_state.active_path:
+            folium.CircleMarker(location=pt, radius=5, color="#00f2ff", fill=True).add_to(m)
+        AntPath(locations=st.session_state.active_path, color="#00f2ff", weight=3).add_to(m)
 
-    # Protocol color legend
-    st.markdown(
-        "<small>"
-        "<span style='color:#3b82f6'>&#9679; UDP</span> &nbsp;"
-        "<span style='color:#ef4444'>&#9679; TCP</span> &nbsp;"
-        "<span style='color:#22c55e'>&#9679; ICMP</span>"
-        "</small>",
-        unsafe_allow_html=True
-    )
-
-    m = folium.Map(location=[20, 0], zoom_start=2, tiles="CartoDB dark_matter")
-
-    if data:
-        proto_colors = {"UDP": "blue", "TCP": "red", "ICMP": "green"}
-
-        for target, hops in data.items():
-            path_coords = []
-            for hop_series in hops:
-                for probe in hop_series:
-                    geo = probe.get("geo", {})
-                    if geo.get("lat") and geo.get("lon"):
-                        coord = [geo["lat"], geo["lon"]]
-                        if coord not in path_coords:
-                            path_coords.append(coord)
-                            color = proto_colors.get(probe["protocol"], "white")
-                            folium.CircleMarker(
-                                location=coord,
-                                radius=5,
-                                color=color,
-                                fill=True,
-                                fill_opacity=0.8,
-                                popup=folium.Popup(
-                                    f"<b>{probe['ip']}</b><br>"
-                                    f"Name: {probe['name']}<br>"
-                                    f"RTT: {probe['rtt']} ms<br>"
-                                    f"Protocol: {probe['protocol']}<br>"
-                                    f"City: {geo.get('city', '?')}, {geo.get('country', '')}",
-                                    max_width=220
-                                )
-                            ).add_to(m)
-
-            if len(path_coords) > 1:
-                folium.PolyLine(
-                    path_coords, color="white", weight=1.5, opacity=0.5,
-                    tooltip=f"Path to {target}"
-                ).add_to(m)
-
-    st_folium(m, width=None, height=550, use_container_width=True)
+    st_folium(m, width=None, height=600, use_container_width=True, key=f"map_{st.session_state.map_key}")
 
 with col_out:
-    # ── TAB 1: Raw output  TAB 2: Statistics ──────────────────────────────
-    tab_raw, tab_stats = st.tabs(["Raw Output", "Hop Statistics"])
+    st.markdown("<h2 style='text-align:center; color:#00f2ff;'>Trace Results</h2>", unsafe_allow_html=True)
+    
+    if data and st.session_state.trace_done:
+        search_query = st.text_input("🔍 Search by IP or Hostname...")
+        
+        for target, hops in data.items():
+            if search_query.lower() not in target.lower(): continue
+            
+            # Loss Calculation
+            loss_total = get_hop_loss(hops[-1])
+            
+            with st.expander(f"🌐 {target} — Loss: {loss_total}%", expanded=True):
+                
+                # Geolocation Error Handling
+                coords = []
+                non_viz = 0
+                for h in hops:
+                    geo = h[0].get('geo', {})
+                    if geo.get('lat'): coords.append([geo['lat'], geo['lon']])
+                    else: non_viz += 1
+                
+                if non_viz > 0:
+                    st.error(f"⚠️ {non_viz} router IPs could not be visualized on the map.")
 
-    with tab_raw:
-        if data:
-            lines = []
-            for target, hops in data.items():
-                lines.append(f"Tracing {target}...")
-                for i, hop_series in enumerate(hops):
-                    res    = hop_series[0]
-                    status = f"{res['ip']} ({res['name']})" if res['ip'] else "*"
-                    lines.append(f"  {i+1:2}  {status}  {res['rtt']} ms")
-                lines.append("")
-            st.code("\n".join(lines), language="text")
-        else:
-            st.info("No results yet. Configure options and click Start Traceroute.")
+                # Action Buttons
+                c1, c2 = st.columns(2)
+                with c1:
+                    if st.button(f"▶️ Play Trace for {target}", key=f"p_{target}"):
+                        st.session_state.active_path = coords
+                        st.session_state.map_key += 1
+                        st.rerun()
+                with c2:
+                    if topo_data:
+                        raw_txt = generate_raw_from_topology(topo_data)
+                        st.download_button("💾 Download Raw Result", raw_txt, f"trace_{target}.txt", key=f"d_{target}")
 
-    with tab_stats:
-        if data:
-            for target, hops in data.items():
-                st.markdown(f"**{target}**")
-                rows = []
-                for i, hop_series in enumerate(hops):
-                    rtts   = [p["rtt"] for p in hop_series if p["rtt"] > 0]
-                    rep_ip = next((p["ip"] for p in hop_series if p["ip"]), "*")
-                    loss   = sum(1 for p in hop_series if not p["ip"])
-                    rows.append({
-                        "Hop":    i + 1,
-                        "IP":     rep_ip,
-                        "Min ms": round(min(rtts),                   2) if rtts else "—",
-                        "Avg ms": round(sum(rtts) / len(rtts),       2) if rtts else "—",
-                        "Max ms": round(max(rtts),                   2) if rtts else "—",
-                        "Loss %": round(100 * loss / len(hop_series), 1),
-                    })
-                st.dataframe(rows, use_container_width=True, hide_index=True)
-        else:
-            st.info("No results yet.")
+                # Deep Packet Analysis Table
+                st.write("**Deep Packet Analysis**")
+                table = []
+                for i, h_series in enumerate(hops):
+                    for probe in h_series:
+                        if (show_udp and probe['protocol']=="UDP") or \
+                           (show_tcp and probe['protocol']=="TCP") or \
+                           (show_icmp and probe['protocol']=="ICMP"):
+                            table.append({
+                                "TTL": i+1, "Protocol": probe['protocol'],
+                                "Router IP": probe['ip'] if probe['ip'] else "N/A",
+                                "RTT (ms)": str(probe['rtt']) if probe['ip'] else "timeout"
+                            })
+                st.dataframe(table, use_container_width=True, height=350)
+    else:
+        st.info("Awaiting trace data...")
