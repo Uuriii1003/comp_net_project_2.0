@@ -1,94 +1,124 @@
 INTERNET TOPOLOGY EXPLORER - RAW RESULTS
 ========================================
 
-Destination: 1.1.1.1
+Destination: 8.8.8.8
 Hop 1:
-  [UDP] 10.209.64.1 (shanghai-232-gw.net.shanghai.nyu.edu) - RTT: 11.7ms
-  [TCP] 10.209.64.1 (shanghai-232-gw.net.shanghai.nyu.edu) - RTT: 15.6ms
-  [ICMP] 10.209.64.1 (shanghai-232-gw.net.shanghai.nyu.edu) - RTT: 14.73ms
-  [UDP] 10.209.64.1 (shanghai-232-gw.net.shanghai.nyu.edu) - RTT: 7.8ms
-  [TCP] 10.209.64.1 (shanghai-232-gw.net.shanghai.nyu.edu) - RTT: 9.83ms
-  [ICMP] 10.209.64.1 (shanghai-232-gw.net.shanghai.nyu.edu) - RTT: 30.81ms
-  [UDP] 10.209.64.1 (shanghai-232-gw.net.shanghai.nyu.edu) - RTT: 13.63ms
-  [TCP] 10.209.64.1 (shanghai-232-gw.net.shanghai.nyu.edu) - RTT: 7.31ms
-  [ICMP] 10.209.64.1 (shanghai-232-gw.net.shanghai.nyu.edu) - RTT: 10.51ms
+  [UDP] 10.209.64.1 (shanghai-232-gw.net.shanghai.nyu.edu) - RTT: 11.75ms
+  [TCP] 10.209.64.1 (shanghai-232-gw.net.shanghai.nyu.edu) - RTT: 5.37ms
+  [ICMP] 10.209.64.1 (shanghai-232-gw.net.shanghai.nyu.edu) - RTT: 4.26ms
 Hop 2:
-  [UDP] 10.213.33.33 (Unknown) - RTT: 11.06ms
-  [TCP] 10.213.33.33 (Unknown) - RTT: 12.98ms
-  [ICMP] 10.213.33.25 (Unknown) - RTT: 14.95ms
-  [UDP] 10.213.33.33 (Unknown) - RTT: 8.37ms
-  [TCP] 10.213.33.33 (Unknown) - RTT: 23.96ms
-  [ICMP] 10.213.33.25 (Unknown) - RTT: 8.86ms
-  [UDP] 10.213.33.33 (Unknown) - RTT: 10.54ms
-  [TCP] 10.213.33.33 (Unknown) - RTT: 8.12ms
-  [ICMP] 10.213.33.25 (Unknown) - RTT: 8.86ms
+  [UDP] 10.213.33.25 (Unknown) - RTT: 6.75ms
+  [TCP] 10.213.33.25 (Unknown) - RTT: 6.59ms
+  [ICMP] 10.213.33.33 (Unknown) - RTT: 7.96ms
 Hop 3:
   [UDP] * - RTT: 0.0ms
-  [TCP] 10.213.32.97 (Unknown) - RTT: 10.34ms
-  [ICMP] 10.213.32.97 (Unknown) - RTT: 13.22ms
-  [UDP] * - RTT: 0.0ms
-  [TCP] 10.213.32.97 (Unknown) - RTT: 14.31ms
-  [ICMP] 10.213.32.97 (Unknown) - RTT: 13.34ms
-  [UDP] * - RTT: 0.0ms
-  [TCP] 10.213.32.97 (Unknown) - RTT: 9.74ms
-  [ICMP] 10.213.32.97 (Unknown) - RTT: 8.75ms
+  [TCP] 10.213.32.97 (Unknown) - RTT: 12.93ms
+  [ICMP] 10.213.32.97 (Unknown) - RTT: 10.13ms
 Hop 4:
   [UDP] * - RTT: 0.0ms
-  [TCP] 10.213.32.70 (Unknown) - RTT: 9.69ms
-  [ICMP] 10.213.32.70 (Unknown) - RTT: 23.77ms
-  [UDP] * - RTT: 0.0ms
-  [TCP] 10.213.32.70 (Unknown) - RTT: 9.66ms
-  [ICMP] 10.213.32.70 (Unknown) - RTT: 10.54ms
-  [UDP] * - RTT: 0.0ms
-  [TCP] 10.213.32.70 (Unknown) - RTT: 7.71ms
-  [ICMP] 10.213.32.70 (Unknown) - RTT: 8.33ms
+  [TCP] 10.213.32.70 (Unknown) - RTT: 8.84ms
+  [ICMP] 10.213.32.70 (Unknown) - RTT: 7.33ms
 Hop 5:
   [UDP] * - RTT: 0.0ms
-  [TCP] 194.223.152.17 (Unknown) - RTT: 43.19ms
-  [ICMP] 194.223.152.17 (Unknown) - RTT: 52.84ms
-  [UDP] * - RTT: 0.0ms
-  [TCP] 194.223.152.17 (Unknown) - RTT: 48.67ms
-  [ICMP] 194.223.152.17 (Unknown) - RTT: 38.58ms
-  [UDP] * - RTT: 0.0ms
-  [TCP] 194.223.152.17 (Unknown) - RTT: 44.24ms
-  [ICMP] 194.223.152.17 (Unknown) - RTT: 45.5ms
+  [TCP] 194.223.152.17 (Unknown) - RTT: 39.5ms
+  [ICMP] 194.223.152.17 (Unknown) - RTT: 38.6ms
 Hop 6:
   [UDP] * - RTT: 0.0ms
-  [TCP] 193.114.182.92 (Unknown) - RTT: 41.49ms
-  [ICMP] 193.114.182.92 (Unknown) - RTT: 42.6ms
-  [UDP] * - RTT: 0.0ms
-  [TCP] 193.114.182.92 (Unknown) - RTT: 38.97ms
-  [ICMP] 193.114.182.92 (Unknown) - RTT: 41.99ms
-  [UDP] * - RTT: 0.0ms
-  [TCP] 193.114.182.92 (Unknown) - RTT: 40.28ms
-  [ICMP] 193.114.182.92 (Unknown) - RTT: 41.03ms
+  [TCP] 193.114.182.92 (Unknown) - RTT: 44.83ms
+  [ICMP] 193.114.182.92 (Unknown) - RTT: 41.66ms
 Hop 7:
   [UDP] * - RTT: 0.0ms
-  [TCP] * - RTT: 0.0ms
-  [ICMP] * - RTT: 0.0ms
-  [UDP] * - RTT: 0.0ms
-  [TCP] 210.171.224.134 (Unknown) - RTT: 43.17ms
-  [ICMP] 210.171.224.134 (Unknown) - RTT: 48.24ms
-  [UDP] * - RTT: 0.0ms
-  [TCP] 210.171.224.134 (Unknown) - RTT: 44.15ms
-  [ICMP] * - RTT: 0.0ms
+  [TCP] 210.173.176.245 (Unknown) - RTT: 37.81ms
+  [ICMP] 210.173.176.245 (Unknown) - RTT: 38.7ms
 Hop 8:
   [UDP] * - RTT: 0.0ms
-  [TCP] 103.22.201.36 (Unknown) - RTT: 37.52ms
-  [ICMP] 103.22.201.123 (Unknown) - RTT: 48.24ms
-  [UDP] * - RTT: 0.0ms
-  [TCP] 103.22.201.36 (Unknown) - RTT: 63.11ms
-  [ICMP] 103.22.201.123 (Unknown) - RTT: 46.26ms
-  [UDP] * - RTT: 0.0ms
-  [TCP] 103.22.201.36 (Unknown) - RTT: 43.16ms
-  [ICMP] 103.22.201.123 (Unknown) - RTT: 39.15ms
+  [TCP] * - RTT: 0.0ms
+  [ICMP] 192.178.248.173 (Unknown) - RTT: 41.28ms
 Hop 9:
   [UDP] * - RTT: 0.0ms
   [TCP] * - RTT: 0.0ms
-  [ICMP] 1.1.1.1 (one.one.one.one) - RTT: 43.62ms
+  [ICMP] 108.170.235.121 (Unknown) - RTT: 43.25ms
+Hop 10:
   [UDP] * - RTT: 0.0ms
   [TCP] * - RTT: 0.0ms
-  [ICMP] 1.1.1.1 (one.one.one.one) - RTT: 42.7ms
+  [ICMP] 8.8.8.8 (dns.google) - RTT: 40.41ms
+
+Destination: 8.8.4.4
+Hop 1:
+  [UDP] 10.209.64.1 (shanghai-232-gw.net.shanghai.nyu.edu) - RTT: 9.34ms
+  [TCP] 10.209.64.1 (shanghai-232-gw.net.shanghai.nyu.edu) - RTT: 9.7ms
+  [ICMP] 10.209.64.1 (shanghai-232-gw.net.shanghai.nyu.edu) - RTT: 7.76ms
+Hop 2:
+  [UDP] 10.213.33.25 (Unknown) - RTT: 6.69ms
+  [TCP] 10.213.33.25 (Unknown) - RTT: 6.98ms
+  [ICMP] 10.213.33.33 (Unknown) - RTT: 8.74ms
+Hop 3:
+  [UDP] * - RTT: 0.0ms
+  [TCP] 10.213.32.97 (Unknown) - RTT: 11.9ms
+  [ICMP] 10.213.32.97 (Unknown) - RTT: 11.0ms
+Hop 4:
+  [UDP] * - RTT: 0.0ms
+  [TCP] 10.213.32.70 (Unknown) - RTT: 13.38ms
+  [ICMP] 10.213.32.70 (Unknown) - RTT: 9.6ms
+Hop 5:
+  [UDP] * - RTT: 0.0ms
+  [TCP] 194.223.152.17 (Unknown) - RTT: 40.53ms
+  [ICMP] 194.223.152.17 (Unknown) - RTT: 37.43ms
+Hop 6:
+  [UDP] * - RTT: 0.0ms
+  [TCP] 193.114.182.92 (Unknown) - RTT: 39.13ms
+  [ICMP] 193.114.182.92 (Unknown) - RTT: 41.22ms
+Hop 7:
+  [UDP] * - RTT: 0.0ms
+  [TCP] 210.173.176.245 (Unknown) - RTT: 47.05ms
+  [ICMP] 210.173.176.245 (Unknown) - RTT: 38.05ms
+Hop 8:
   [UDP] * - RTT: 0.0ms
   [TCP] * - RTT: 0.0ms
-  [ICMP] 1.1.1.1 (one.one.one.one) - RTT: 45.02ms
+  [ICMP] 209.85.250.107 (Unknown) - RTT: 42.45ms
+Hop 9:
+  [UDP] * - RTT: 0.0ms
+  [TCP] * - RTT: 0.0ms
+  [ICMP] 142.250.61.143 (Unknown) - RTT: 39.88ms
+Hop 10:
+  [UDP] * - RTT: 0.0ms
+  [TCP] * - RTT: 0.0ms
+  [ICMP] 8.8.4.4 (dns.google) - RTT: 42.08ms
+
+Destination: 1.1.1.1
+Hop 1:
+  [UDP] 10.209.64.1 (shanghai-232-gw.net.shanghai.nyu.edu) - RTT: 8.56ms
+  [TCP] 10.209.64.1 (shanghai-232-gw.net.shanghai.nyu.edu) - RTT: 5.58ms
+  [ICMP] 10.209.64.1 (shanghai-232-gw.net.shanghai.nyu.edu) - RTT: 7.24ms
+Hop 2:
+  [UDP] 10.213.33.33 (Unknown) - RTT: 9.89ms
+  [TCP] 10.213.33.33 (Unknown) - RTT: 8.63ms
+  [ICMP] 10.213.33.25 (Unknown) - RTT: 10.16ms
+Hop 3:
+  [UDP] * - RTT: 0.0ms
+  [TCP] 10.213.32.97 (Unknown) - RTT: 11.78ms
+  [ICMP] 10.213.32.97 (Unknown) - RTT: 9.7ms
+Hop 4:
+  [UDP] * - RTT: 0.0ms
+  [TCP] 10.213.32.70 (Unknown) - RTT: 12.91ms
+  [ICMP] 10.213.32.70 (Unknown) - RTT: 10.18ms
+Hop 5:
+  [UDP] * - RTT: 0.0ms
+  [TCP] 194.223.152.17 (Unknown) - RTT: 41.99ms
+  [ICMP] 194.223.152.17 (Unknown) - RTT: 38.85ms
+Hop 6:
+  [UDP] * - RTT: 0.0ms
+  [TCP] 193.114.182.92 (Unknown) - RTT: 44.6ms
+  [ICMP] 193.114.182.92 (Unknown) - RTT: 40.52ms
+Hop 7:
+  [UDP] * - RTT: 0.0ms
+  [TCP] 210.171.224.134 (Unknown) - RTT: 59.74ms
+  [ICMP] * - RTT: 0.0ms
+Hop 8:
+  [UDP] * - RTT: 0.0ms
+  [TCP] 103.22.201.131 (Unknown) - RTT: 41.17ms
+  [ICMP] 103.22.201.123 (Unknown) - RTT: 37.88ms
+Hop 9:
+  [UDP] * - RTT: 0.0ms
+  [TCP] * - RTT: 0.0ms
+  [ICMP] 1.1.1.1 (one.one.one.one) - RTT: 41.3ms
