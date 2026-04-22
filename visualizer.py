@@ -102,59 +102,189 @@ if st.session_state.trace_done:
     if os.path.exists("topology.json"):
         with open("topology.json", "r") as f: topo_data = json.load(f)
 
+# # --- 7. MAIN LAYOUT: MAP & ANALYZER ---
+# col_map, col_out = st.columns([1.3, 1.2])
+
+# with col_map:
+#     st.subheader("Step 4: Interactive Topology Map")
+#     m = folium.Map(location=st.session_state.map_center, zoom_start=st.session_state.map_zoom, tiles="CartoDB dark_matter")
+    
+#     if st.session_state.active_path:
+#         for pt in st.session_state.active_path:
+#             folium.CircleMarker(location=pt, radius=5, color="#00f2ff", fill=True).add_to(m)
+#         AntPath(locations=st.session_state.active_path, color="#00f2ff", weight=3).add_to(m)
+
+#     st_folium(m, width=None, height=600, use_container_width=True, key=f"map_{st.session_state.map_key}")
+
+# with col_out:
+#     st.markdown("<h2 style='text-align:center; color:#00f2ff;'>Trace Results</h2>", unsafe_allow_html=True)
+    
+#     if data and st.session_state.trace_done:
+#         search_query = st.text_input("🔍 Search by IP or Hostname...")
+        
+#         for target, hops in data.items():
+#             if search_query.lower() not in target.lower(): continue
+            
+#             # Loss Calculation
+#             loss_total = get_hop_loss(hops[-1])
+            
+#             with st.expander(f"🌐 {target} — Loss: {loss_total}%", expanded=True):
+                
+#                 # Geolocation Error Handling
+#                 coords = []
+#                 non_viz = 0
+#                 for h in hops:
+#                     geo = h[0].get('geo', {})
+#                     if geo.get('lat'): coords.append([geo['lat'], geo['lon']])
+#                     else: non_viz += 1
+                
+#                 if non_viz > 0:
+#                     st.error(f"⚠️ {non_viz} router IPs could not be visualized on the map.")
+
+#                 # Action Buttons
+#                 c1, c2 = st.columns(2)
+#                 with c1:
+#                     if st.button(f"▶️ Play Trace for {target}", key=f"p_{target}"):
+#                         st.session_state.active_path = coords
+#                         st.session_state.map_key += 1
+#                         st.rerun()
+#                 with c2:
+#                     if topo_data:
+#                         raw_txt = generate_raw_from_topology(topo_data)
+#                         st.download_button("💾 Download Raw Result", raw_txt, f"trace_{target}.txt", key=f"d_{target}")
+
+#                 # Deep Packet Analysis Table
+#                 st.write("**Deep Packet Analysis**")
+#                 table = []
+#                 for i, h_series in enumerate(hops):
+#                     for probe in h_series:
+#                         if (show_udp and probe['protocol']=="UDP") or \
+#                            (show_tcp and probe['protocol']=="TCP") or \
+#                            (show_icmp and probe['protocol']=="ICMP"):
+#                             table.append({
+#                                 "TTL": i+1, "Protocol": probe['protocol'],
+#                                 "Router IP": probe['ip'] if probe['ip'] else "N/A",
+#                                 "RTT (ms)": str(probe['rtt']) if probe['ip'] else "timeout"
+#                             })
+#                 st.dataframe(table, use_container_width=True, height=350)
+#     else:
+#         st.info("Awaiting trace data...")
+
 # --- 7. MAIN LAYOUT: MAP & ANALYZER ---
-col_map, col_out = st.columns([1.3, 1.2])
+col_map, col_out = st.columns([1.5, 1])
+
+# Set your "Home" anchor
+HOME_LAT, HOME_LON = 31.22, 121.48 
 
 with col_map:
-    st.subheader("Step 4: Interactive Topology Map")
-    m = folium.Map(location=st.session_state.map_center, zoom_start=st.session_state.map_zoom, tiles="CartoDB dark_matter")
+    st.subheader("🌐 Global Path Tree")
+    m = folium.Map(location=[20, 0], zoom_start=2, tiles="CartoDB dark_matter")
     
-    if st.session_state.active_path:
-        for pt in st.session_state.active_path:
-            folium.CircleMarker(location=pt, radius=5, color="#00f2ff", fill=True).add_to(m)
-        AntPath(locations=st.session_state.active_path, color="#00f2ff", weight=3).add_to(m)
+    all_coords = []
 
-    st_folium(m, width=None, height=600, use_container_width=True, key=f"map_{st.session_state.map_key}")
+    if data:
+        for target, hops in data.items():
+            # 1. DATA EXTRACTION
+            path_info = []
+            for h_series in hops:
+                timeouts = sum(1 for p in h_series if not p.get('ip'))
+                loss_rate = round((timeouts / len(h_series)) * 100, 1)
+                
+                # Get best geo data available in the hop
+                best_p = next((p for p in h_series if p.get('geo', {}).get('lat')), h_series[0])
+                geo = best_p.get('geo', {})
+                
+                path_info.append({
+                    "lat": geo.get('lat'), "lon": geo.get('lon'), 
+                    "ip": best_p.get('ip', '*'), "proto": best_p.get('protocol', 'UDP'),
+                    "name": best_p.get('name', 'Unknown'), "rtt": best_p.get('rtt', 0.0),
+                    "loss": loss_rate
+                })
+
+            # 2. SIMPLE LINEAR INTERPOLATION (No zigzag, even spacing)
+            final_coords = []
+            last_known_pos = [HOME_LAT, HOME_LON]
+            last_known_idx = -1
+
+            for i in range(len(path_info)):
+                next_k_pos, next_k_idx = None, -1
+                for j in range(i, len(path_info)):
+                    if path_info[j]['lat'] is not None:
+                        next_k_idx, next_k_pos = j, [path_info[j]['lat'], path_info[j]['lon']]
+                        break
+                
+                if path_info[i]['lat'] is not None:
+                    pos = [path_info[i]['lat'], path_info[i]['lon']]
+                    final_coords.append(pos)
+                    last_known_pos, last_known_idx = pos, i
+                elif next_k_pos:
+                    # Even spacing: (current hop index - start) / (total hops in gap)
+                    steps_in_gap = next_k_idx - last_known_idx
+                    current_step = i - last_known_idx
+                    progress = current_step / steps_in_gap
+                    
+                    lat = last_known_pos[0] + (next_k_pos[0] - last_known_pos[0]) * progress
+                    lon = last_known_pos[1] + (next_k_pos[1] - last_known_pos[1]) * progress
+                    final_coords.append([lat, lon])
+                else:
+                    # Trailing hops: simple small offset
+                    pos = [last_known_pos[0] + 0.1, last_known_pos[1] + 0.1]
+                    final_coords.append(pos)
+                    last_known_pos = pos
+
+            # 3. DRAWING ENGINE
+            proto_colors = {"TCP": "#FF4B4B", "UDP": "#1C83E1", "ICMP": "#00D166"}
+            
+            # Draw Links with Protocol Colors per segment
+            for idx in range(len(final_coords) - 1):
+                segment = [final_coords[idx], final_coords[idx+1]]
+                segment_proto = path_info[idx+1]['proto']
+                seg_color = proto_colors.get(segment_proto, "#00f2ff")
+                
+                folium.PolyLine(
+                    segment, color=seg_color, weight=4, opacity=0.8,
+                    tooltip=f"Link Protocol: {segment_proto}"
+                ).add_to(m)
+            
+            # Draw Node Markers with Hover Info
+            for idx, coord in enumerate(final_coords):
+                p = path_info[idx]
+                node_color = proto_colors.get(p['proto'], "#00f2ff")
+                
+                hover_text = f"""
+                    <b>Hop {idx+1}</b><br>
+                    IP: {p['ip']}<br>
+                    Host: {p['name']}<br>
+                    Protocol: {p['proto']}<br>
+                    RTT: {p['rtt']} ms<br>
+                    Loss Rate: {p['loss']}%
+                """
+                
+                folium.CircleMarker(
+                    location=coord, radius=5, color="white", fill=True,
+                    fill_color=node_color, fill_opacity=0.9,
+                    tooltip=folium.Tooltip(hover_text)
+                ).add_to(m)
+            
+            all_coords.extend(final_coords)
+
+        if all_coords:
+            m.fit_bounds(all_coords)
+
+    st_folium(m, width=None, height=650, use_container_width=True, key="topology_map")
 
 with col_out:
-    st.markdown("<h2 style='text-align:center; color:#00f2ff;'>Trace Results</h2>", unsafe_allow_html=True)
-    
-    if data and st.session_state.trace_done:
+    st.markdown("<h2 style='text-align:center; color:#00f2ff;'>Trace Analysis</h2>", unsafe_allow_html=True)
+    if data:
         search_query = st.text_input("🔍 Search by IP or Hostname...")
-        
         for target, hops in data.items():
             if search_query.lower() not in target.lower(): continue
-            
-            # Loss Calculation
             loss_total = get_hop_loss(hops[-1])
-            
             with st.expander(f"🌐 {target} — Loss: {loss_total}%", expanded=True):
+                if topo_data:
+                    raw_txt = generate_raw_from_topology(topo_data)
+                    st.download_button("💾 Download", raw_txt, f"trace_{target}.txt", key=f"d_{target}")
                 
-                # Geolocation Error Handling
-                coords = []
-                non_viz = 0
-                for h in hops:
-                    geo = h[0].get('geo', {})
-                    if geo.get('lat'): coords.append([geo['lat'], geo['lon']])
-                    else: non_viz += 1
-                
-                if non_viz > 0:
-                    st.error(f"⚠️ {non_viz} router IPs could not be visualized on the map.")
-
-                # Action Buttons
-                c1, c2 = st.columns(2)
-                with c1:
-                    if st.button(f"▶️ Play Trace for {target}", key=f"p_{target}"):
-                        st.session_state.active_path = coords
-                        st.session_state.map_key += 1
-                        st.rerun()
-                with c2:
-                    if topo_data:
-                        raw_txt = generate_raw_from_topology(topo_data)
-                        st.download_button("💾 Download Raw Result", raw_txt, f"trace_{target}.txt", key=f"d_{target}")
-
-                # Deep Packet Analysis Table
-                st.write("**Deep Packet Analysis**")
                 table = []
                 for i, h_series in enumerate(hops):
                     for probe in h_series:
@@ -164,8 +294,8 @@ with col_out:
                             table.append({
                                 "TTL": i+1, "Protocol": probe['protocol'],
                                 "Router IP": probe['ip'] if probe['ip'] else "N/A",
-                                "RTT (ms)": str(probe['rtt']) if probe['ip'] else "timeout"
+                                "RTT (ms)": probe['rtt'] if probe['ip'] else "timeout"
                             })
-                st.dataframe(table, use_container_width=True, height=350)
+                st.dataframe(table, use_container_width=True, height=400)
     else:
         st.info("Awaiting trace data...")
