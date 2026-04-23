@@ -1,70 +1,48 @@
-# Installation & Operational Guide: Internet Topology Explorer
+🛰️ Internet Topology Explorer
+A professional-grade network analysis tool that combines multi-protocol traceroute capabilities with geographic and logical visualization.
 
-This guide covers the prerequisites, installation steps, and operational instructions for the **Internet Topology Explorer**.
+📂 Source Code Structure
+Based on our project directory, the system is organized as follows:
 
----
+⚙️ Core Logic (src/)
 
-## 1. Prerequisites
-Before you begin, ensure your system meets the following requirements:
+src/main.py: The backend orchestration script that handles CLI arguments and coordinates the probing logic.
 
-* **Python 3.12** (or higher)
-* **Sudo/Root Privileges**: Required for **Scapy** to perform raw packet injection and network sniffing.
+src/packets.py: Core networking layer using Scapy to generate multi-protocol (ICMP/TCP/UDP) traceroute packets.
 
----
+src/parser.py: Extracts metadata from network responses and integrates geographic data.
 
-## 2. Installation Steps
-Follow these steps to set up your environment:
+src/generate_viz.py: Helper utility for static visualization rendering.
 
-### Step 1: Install Dependencies
-Run the following command to install the required libraries:
-```bash
-pip install streamlit scapy pandas streamlit-folium folium streamlit-agraph
-```
-> **Note:** If a `Makefile` is provided in your directory, you can simply run `make install`.
+🖥️ Frontend & Data
 
-### Step 2: Run the Analyzer
-To launch the dashboard, you must run Streamlit with root privileges:
-```bash
-sudo streamlit run visualizer.py
-```
+visualizer.py: The primary Streamlit frontend. It handles the search interface, input parameters, and the 3-segment visualization dashboard.
 
----
+data/: Directory containing data exchange files (results.json, topology.json) and target lists (targets.txt).
 
-## 3. Using the Explorer
-Once the application opens in your browser, follow these steps to begin your analysis:
+✨ Key Design Choices
+Logical Performance Weighting: In the "Logical Topology" view, the link thickness between nodes is dynamically scaled based on RTT. Thicker lines indicate lower latency (higher performance).
 
-### I. Input Target
-* **Single IP:** Enter a target address (e.g., `8.8.8.8`).
-* **Batch Upload:** Upload a `.txt` file containing multiple targets.
+Protocol Color Coding: Nodes and edges are colored by protocol for immediate identification:
 
-### II. Adjust the 6 Core Arguments
-| Argument | Description |
-| :--- | :--- |
-| **Min/Max TTL** | Defines the hop range for the traceroute. |
-| **Series/Hop** | Number of probes sent to each hop. |
-| **Packet Size** | The size of the probe in bytes. |
-| **Timeout** | Seconds to wait for a response before skipping. |
-| **Wait Time** | Delay between individual probes to avoid rate-limiting. |
+UDP: Blue 🔵
 
-### III. Launch
-Click the **"Launch Traceroute"** button to begin the scan.
+TCP: Red 🔴
 
----
+ICMP: Green 🟢
 
-## 4. Navigation & Analysis
-The Explorer provides three primary views for interpreting network data:
+Searchable Analysis: Includes a global search bar to filter through massive batch results by IP or Hostname.
 
-* **Geographic Map:** Displays the physical path of packets. Hover over markers to view **6-point metrics**: *Hop #, IP, Hostname, Protocol, RTT, and Loss Rate.*
-* **Logical Topology:** A node-link graph of the network. **Link thickness** scales with speed; thicker lines indicate lower RTT (faster connections).
-* **Data & Logs:** Use the built-in search bar to filter specific nodes or download the raw trace report for offline analysis.
+🚀 Getting Started
+For detailed installation steps, system requirements, and operational instructions, please refer to the dedicated guide:
 
----
+👉 View the Installation & Operation Guide (HOWTO.md)
 
-## 5. Maintenance
-To clear temporary JSON data, target lists, and Python cache files, run:
-```bash
+🧹 Maintenance
+To clear temporary JSON data, targets, and Python cache:
+
+Bash
 make clean
-```
+[!NOTE]
 
-> [!IMPORTANT]  
-> **Permission Denied?** If you encounter this error, ensure you are using `sudo`. Raw socket manipulation is restricted to root users on most Unix-like systems.
+This project requires Sudo/Root Privileges for Scapy raw packet injection.
