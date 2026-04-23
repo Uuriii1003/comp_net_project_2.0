@@ -1,4 +1,4 @@
-# Makefile for Computer Network Project 2.0
+# Makefile for Computer Network Project
 
 install:
 	pip install streamlit scapy pandas streamlit-folium folium streamlit-agraph
