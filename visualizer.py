@@ -8,6 +8,8 @@ from streamlit_folium import st_folium
 import pandas as pd
 from streamlit_agraph import agraph, Node, Edge, Config
 
+PROTO_COLORS = {"UDP": "#1C83E1", "TCP": "#FF4B4B", "ICMP": "#00D166"}
+
 # --- 1. CORE UTILITIES ---
 def get_hop_metrics(h_series):
     if not h_series: return 0.0, 0.0
@@ -39,6 +41,12 @@ with st.sidebar:
     single_ip = st.text_input("Single IP address", placeholder="8.8.8.8")
     target_file = st.file_uploader("Batch upload targets.txt", type=["txt", "csv"])
 
+    st.divider()
+    st.markdown("### 🎨 Protocol Legend")
+    l_col1, l_col2, l_col3 = st.columns(3)
+    l_col1.markdown(f"<p style='color:{PROTO_COLORS['UDP']}'>● UDP</p>", unsafe_allow_html=True)
+    l_col2.markdown(f"<p style='color:{PROTO_COLORS['TCP']}'>● TCP</p>", unsafe_allow_html=True)
+    l_col3.markdown(f"<p style='color:{PROTO_COLORS['ICMP']}'>● ICMP</p>", unsafe_allow_html=True)
     st.divider()
     st.header("Step 2: Customize Arguments")
     col1, col2 = st.columns(2)

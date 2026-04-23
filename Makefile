@@ -1,0 +1,13 @@
+# Makefile for Computer Network Project
+
+install:
+	pip install streamlit scapy pandas streamlit-folium folium streamlit-agraph
+
+run:
+	sudo streamlit run visualizer.py
+
+clean:
+	rm -rf __pycache__
+	rm -f results.json targets_current.txt topology.json
+
+.PHONY: install run clean
