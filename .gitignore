@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+*$py.class
+
+results.json
+topology.json
+raw_output.txt
+targets_current.txt
