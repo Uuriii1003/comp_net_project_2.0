@@ -7,7 +7,7 @@ def send_and_parse(response, protocol, rtt, ttl, original_target):
 
     sender_ip = response.src
     
-    # DNS Resolution as required by project
+    # DNS Resolution
     try:
         hostname = socket.gethostbyaddr(sender_ip)[0]
     except (socket.herror, socket.gaierror, Exception):

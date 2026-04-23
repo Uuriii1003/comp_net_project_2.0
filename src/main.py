@@ -34,7 +34,7 @@ def traceroute(target_ip, args):
         reached_destination = False
 
         for _ in range(args.num_series):
-            # Requirement: Send UDP, TCP, and ICMP per series
+            #Sending UDP, TCP, and ICMP per series
             for protocol in ["UDP", "TCP", "ICMP"]:
                 packet = create_probe(target_ip, ttl, protocol, args.port, args.size)
                 
@@ -101,7 +101,7 @@ if __name__ == "__main__":
     with open("results.json", "w") as f:
         json.dump(all_data, f, indent=4)
     
-    # 📄 Save 2: Raw Text Output for Submission Requirement
+    # Raw Text Output
     with open("raw_output.txt", "w") as f:
         f.write("INTERNET TOPOLOGY EXPLORER - RAW RESULTS\n")
         f.write("="*40 + "\n")
@@ -121,7 +121,7 @@ if __name__ == "__main__":
 
     #Automate the Topology Generation
     try:
-        from generate_viz import process_for_viz
+        from src.generate_viz import process_for_viz
         process_for_viz("results.json", "topology.json")
         print("Successfully generated topology.json for visualizer.")
     except ImportError:
