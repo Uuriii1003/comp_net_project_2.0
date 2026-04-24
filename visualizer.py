@@ -69,7 +69,7 @@ if run_btn:
         if single_ip.strip(): f.write(single_ip.strip())
         elif target_file: f.write(target_file.read().decode())
 
-    cmd = ["sudo", sys.executable, "main.py", tmp_path, "-min", str(min_ttl), "-m", str(max_ttl), 
+    cmd = ["sudo", sys.executable, "src/main.py", tmp_path, "-min", str(min_ttl), "-m", str(max_ttl), 
            "-n", str(num_series), "-s", str(pkt_size), "-t", str(timeout), "-w", str(wait_time)]
     
     with st.spinner("Probing Internet Topology..."):
