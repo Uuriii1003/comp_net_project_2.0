@@ -3,6 +3,7 @@ import json
 import argparse
 import os
 import sys
+import ipaddress
 import requests
 from scapy.all import sr1
 from packets import create_probe
@@ -10,8 +11,14 @@ from parser import send_and_parse
 
 #Function to get geographic coordinates
 def get_geo_data(ip):
-    if not ip or ip == "*" or ip.startswith("10.") or ip.startswith("192.168."):
+    if not ip or ip == "*":
         return {"lat": None, "lon": None, "city": "Internal Network"}
+    try:
+        addr = ipaddress.ip_address(ip)
+        if addr.is_private or addr.is_loopback or addr.is_link_local:
+            return {"lat": None, "lon": None, "city": "Internal Network"}
+    except ValueError:
+        pass
     try:
         response = requests.get(f"http://ip-api.com/json/{ip}", timeout=2).json()
         if response.get("status") == "success":
@@ -98,11 +105,12 @@ if __name__ == "__main__":
 
     all_data = {ip: traceroute(ip, args) for ip in targets}
 
-    with open("results.json", "w") as f:
+    os.makedirs("data", exist_ok=True)
+    with open("data/results.json", "w") as f:
         json.dump(all_data, f, indent=4)
     
     # Raw Text Output
-    with open("raw_output.txt", "w") as f:
+    with open("data/raw_output.txt", "w") as f:
         f.write("INTERNET TOPOLOGY EXPLORER - RAW RESULTS\n")
         f.write("="*40 + "\n")
         for target, hops in all_data.items():
@@ -117,12 +125,12 @@ if __name__ == "__main__":
                     rtt = probe.get('rtt', 0.0)
                     f.write(f"  [{proto}] {node} - RTT: {rtt}ms\n")
     
-    print(f"\nData saved to results.json and raw_output.txt")
+    print(f"\nData saved to data/results.json and data/raw_output.txt")
 
     #Automate the Topology Generation
     try:
-        from src.generate_viz import process_for_viz
-        process_for_viz("results.json", "topology.json")
+        from generate_viz import process_for_viz
+        process_for_viz("data/results.json", "data/topology.json")
         print("Successfully generated topology.json for visualizer.")
     except ImportError:
         print("Note: generate_viz.py not found. Run it manually to update the UI.")

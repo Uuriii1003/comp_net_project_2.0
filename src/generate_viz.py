@@ -43,4 +43,4 @@ def process_for_viz(input_filename, output_filename):
         json.dump({"nodes": list(nodes.values()), "links": links}, f, indent=4)
 
 if __name__ == "__main__":
-    process_for_viz("results.json", "topology.json")
+    process_for_viz("data/results.json", "data/topology.json")

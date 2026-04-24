@@ -18,8 +18,9 @@ def send_and_parse(response, protocol, rtt, ttl, original_target):
     if sender_ip == original_target:
         is_destination = True
     elif response.haslayer(ICMP):
-        # Type 3 = Port Unreachable (UDP/TCP success), Type 0 = Echo Reply (ICMP success)
-        if response[ICMP].type in [0, 3]:
+        icmp = response[ICMP]
+        # Type 0 = Echo Reply (ICMP success), Type 3 Code 3 = Port Unreachable (UDP/TCP reached destination)
+        if icmp.type == 0 or (icmp.type == 3 and icmp.code == 3):
             is_destination = True
 
     return {

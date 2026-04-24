@@ -9,6 +9,7 @@ import pandas as pd
 from streamlit_agraph import agraph, Node, Edge, Config
 
 PROTO_COLORS = {"UDP": "#1C83E1", "TCP": "#FF4B4B", "ICMP": "#00D166"}
+HOME_LAT, HOME_LON = 31.22, 121.48
 
 # --- 1. CORE UTILITIES ---
 def get_hop_metrics(h_series):
@@ -72,18 +73,20 @@ if run_btn:
     cmd = ["sudo", sys.executable, "src/main.py", tmp_path, "-min", str(min_ttl), "-m", str(max_ttl), 
            "-n", str(num_series), "-s", str(pkt_size), "-t", str(timeout), "-w", str(wait_time)]
     
+    # Estimate max possible runtime and set a hard timeout to prevent UI from hanging
+    max_subprocess_timeout = int(max_ttl) * int(num_series) * 3 * (int(timeout) + float(wait_time)) + 30
     with st.spinner("Probing Internet Topology..."):
-        subprocess.run(cmd)
+        try:
+            subprocess.run(cmd, timeout=max_subprocess_timeout)
+        except subprocess.TimeoutExpired:
+            st.warning("Traceroute timed out. Partial results may be available.")
     
-    if os.path.exists("results.json"):
-        with open("results.json", "r") as f: 
+    if os.path.exists("data/results.json"):
+        with open("data/results.json", "r") as f: 
             st.session_state.current_data = json.load(f)
     st.rerun()
 
 # --- 4. DATA VISUALIZATION WITH SEARCHBAR ---
-HOME_LAT, HOME_LON = 31.22, 121.48 
-PROTO_COLORS = {"UDP": "#1C83E1", "TCP": "#FF4B4B", "ICMP": "#00D166"}
-
 if st.session_state.current_data:
     # --- SEARCHBAR IMPLEMENTATION ---
     search_query = st.text_input("🔍 Search results by IP or Hostname...", placeholder="e.g. 1.1.1.1").strip().lower()
