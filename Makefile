@@ -7,7 +7,7 @@ run:
 	sudo streamlit run visualizer.py
 
 clean:
-	rm -rf __pycache__
-	rm -f results.json targets_current.txt topology.json
+	rm -rf __pycache__ src/__pycache__
+	rm -f data/results.json data/raw_output.txt data/topology.json targets_current.txt
 
 .PHONY: install run clean
