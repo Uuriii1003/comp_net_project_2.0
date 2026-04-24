@@ -88,6 +88,35 @@ if run_btn:
 
 # --- 4. DATA VISUALIZATION WITH SEARCHBAR ---
 if st.session_state.current_data:
+    # --- SUMMARY STAT BAR ---
+    _data = st.session_state.current_data
+    _total_targets = len(_data)
+    _total_hops    = sum(len(h) for h in _data.values())
+    _all_rtts      = [p["rtt"] for hops in _data.values() for series in hops for p in series if p.get("ip") and p["rtt"] > 0]
+    _avg_rtt       = round(sum(_all_rtts) / len(_all_rtts), 1) if _all_rtts else 0.0
+    _all_probes    = sum(1 for hops in _data.values() for series in hops for p in series)
+    _all_timeouts  = sum(1 for hops in _data.values() for series in hops for p in series if not p.get("ip"))
+    _avg_loss      = round((_all_timeouts / _all_probes) * 100, 1) if _all_probes else 0.0
+
+    _rtt_color  = "#00D166" if _avg_rtt < 30 else ("#FFA500" if _avg_rtt < 100 else "#FF4B4B")
+    _loss_color = "#FF4B4B" if _avg_loss > 10 else "#00D166"
+
+    c1, c2, c3, c4 = st.columns(4)
+    c1.metric("Targets",   _total_targets)
+    c2.metric("Total Hops", _total_hops)
+    c3.metric("Avg RTT",   f"{_avg_rtt} ms")
+    c4.metric("Avg Loss",  f"{_avg_loss} %")
+
+    st.markdown(
+        f"""<style>
+        [data-testid="stMetricValue"] {{ font-size: 1.6rem; }}
+        div:nth-child(3) [data-testid="stMetricValue"] {{ color: {_rtt_color}; }}
+        div:nth-child(4) [data-testid="stMetricValue"] {{ color: {_loss_color}; }}
+        </style>""",
+        unsafe_allow_html=True
+    )
+    st.divider()
+
     # --- SEARCHBAR IMPLEMENTATION ---
     search_query = st.text_input("🔍 Search results by IP or Hostname...", placeholder="e.g. 1.1.1.1").strip().lower()
     
